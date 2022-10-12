@@ -1,0 +1,16 @@
+// TODO: move these styles into base/reset files
+:host {
+  display: inline-block;
+}
+
+label, pds-label {
+  --color: var(--supreme-waffle-color-neutral-charcoal-400);
+  --font-family: var(--supreme-waffle-font-family-circular);
+  --font-weight: var(--supreme-waffle-font-weight-medium);
+  --letter-spacing: var(--supreme-waffle-letter-spacing-xs);
+
+  color: var(--color);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  letter-spacing: var(--letter-spacing);
+}

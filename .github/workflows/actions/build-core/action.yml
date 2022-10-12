@@ -1,0 +1,57 @@
+name: 'Build Core'
+description: 'Builds Core library'
+
+inputs:
+  node-version:
+    description: 'The version of node to use'
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Check out latest
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+        ref: ${{ github.event.pull_request.head.sha }}
+
+    - uses: actions/setup-node@v3
+      with:
+        node-version: ${{ inputs.node-version }}
+
+    - name: Verify NPM Cache
+      shell: bash
+      run: npm cache verify
+
+    - name: Get NPM cache directory
+      id: npm-cache-dir
+      shell: bash
+      run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
+
+    - name: Cache node_modules
+      uses: actions/cache@v3
+      id: cache-node-modules
+      with:
+        path: ${{ steps.npm-cache-dir.outputs.dir }}
+        key: ${{ runner.os }}-build-${{ github.sha }}-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-
+
+    - name: Set SHA
+      uses: nrwl/nx-set-shas@v3
+
+    - name: Install Dependencies
+      if: steps.cache-node-modules.outputs.cache-hit != true
+      run: npm ci
+      shell: bash
+
+    - name: Build Core
+      run: npx nx run supreme-waffle-core:build
+      shell: bash
+
+    - name: Upload artifacts
+      uses: ./.github/workflows/actions/upload-archive
+      with:
+        name: core-build
+        output: libs/core/CoreBuild.zip
+        paths: libs/core/css libs/core/dist libs/core/loader libs/core/src/components.d.ts
