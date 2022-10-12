@@ -1,0 +1,12 @@
+:host(.pds-sortable) {
+  --border-radius: var(--supreme-waffle-border-radius-md);
+  --border: var(--supreme-waffle-border-default);
+
+  display: flex;
+  flex-direction: column;
+
+  &.pds-sortable--bordered {
+    border: var(--border);
+    border-radius: var(--border-radius)
+  }
+}

@@ -1,0 +1,80 @@
+:host {
+
+  --border-radius: var(--supreme-waffle-border-radius-sm);
+  --color: var(--supreme-waffle-color-neutral-charcoal-400);
+  --font-size: var(--supreme-waffle-font-size-body);
+  --font-size-sm: var(--supreme-waffle-font-size-body-sm);
+  --font-size-xs: var(--supreme-waffle-font-size-body-xs);
+  --font-weight: var(--supreme-waffle-font-weight-medium);
+  --margin-inline-start: var(--supreme-waffle-spacing-xxs);
+  --outline: 4px solid var(--supreme-waffle-color-primary-200);
+  --svg-lg: 15px;
+  --svg-md: 13px;
+  --svg-sm: 11px;
+
+  display: inline;
+
+  pds-icon {
+    margin-inline-start: var(--margin-inline-start);
+  }
+}
+
+.pds-link {
+  align-items: center;
+  color: var(--color);
+  display: inline-flex;
+  font-weight: inherit;
+
+  &:focus {
+    border-radius: var(--border-radius);
+    outline: var(--outline);
+  }
+}
+
+// We have a small consensus stating that
+// fonts will be REMs, box-model will be
+// discussed later px or (r)em's
+.pds-link--sm {
+  font-size: var(--font-size-xs);
+
+  pds-icon {
+    height: var(--svg-sm);
+    width: var(--svg-sm);
+  }
+}
+
+.pds-link--md {
+  font-size: var(--font-size-sm);
+
+  pds-icon {
+    height: var(--svg-md);
+    width: var(--svg-md);
+  }
+}
+
+.pds-link--lg {
+  font-size: var(--font-size);
+
+  pds-icon {
+    height: var(--svg-lg);
+    width: var(--svg-lg);
+  }
+}
+
+.pds-link--plain {
+  font-weight: var(--font-weight);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Default = inline link
+.pds-link--default {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
