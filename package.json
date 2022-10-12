@@ -7,6 +7,7 @@
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap",
+    "build.all": "nx run-many --target=build",
     "prepare": "husky install"
   },
   "devDependencies": {
