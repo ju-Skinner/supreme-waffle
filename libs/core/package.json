@@ -1,0 +1,114 @@
+{
+  "name": "@ju-skinner/supreme-waffle-core",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "Base components for Design System",
+  "author": "",
+  "keywords": [
+    "stencil",
+    "framework",
+    "web components",
+    "design system"
+  ],
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/core/core.esm.js",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/",
+    "directory": "dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ju-skinner/supreme-waffle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ju-skinner/supreme-waffle/issues"
+  },
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "build": "npm run build.stencil",
+    "build.all": "run-s build.stencil build.tokens build.storybook",
+    "build.stencil": "stencil build --docs",
+    "build.storybook": "storybook build",
+    "build.ts": "tsc -p scripts/tsconfig.json",
+    "build.tokens": "npm run build.ts && node scripts/build-tokens.js",
+    "deploy": "npm run build.all",
+    "generate": "stencil generate",
+    "lint": "run-p lint.*",
+    "lint.eslint": "eslint src",
+    "lint.styles": "stylelint \"./src/**/*.*css\"",
+    "prettier": "prettier \"./src/**/*.{html,ts,tsx,js,jsx}\"",
+    "start": "run-p start.*",
+    "start.stencil": "stencil build --docs --dev --watch --serve",
+    "start.storybook": "storybook dev -p 6006",
+    "test": "stencil test --spec --e2e --coverage",
+    "test.watch": "stencil test --spec --e2e --watchAll --coverage"
+  },
+  "dependencies": {
+    "@ju-skinner/ideal-octo-sniffle": "2.0.3-alpha.0",
+    "@stencil/core": "^4.0.2",
+    "sortablejs": "^1.15.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/preset-env": "^7.22.10",
+    "@pxtrn/storybook-addon-docs-stencil": "^6.4.1",
+    "@stencil-community/eslint-plugin": "^0.5.0",
+    "@stencil/react-output-target": "^0.5.3",
+    "@stencil/sass": "^2.0.0",
+    "@storybook/addon-a11y": "^7.3.2",
+    "@storybook/addon-actions": "^7.3.2",
+    "@storybook/addon-essentials": "^7.3.2",
+    "@storybook/addon-links": "^7.3.2",
+    "@storybook/web-components": "^7.3.2",
+    "@storybook/web-components-vite": "^7.3.2",
+    "@types/jest": "^27.0.3",
+    "@types/sortablejs": "^1.15.1",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.2.0",
+    "babel-loader": "^8.2.5",
+    "eslint": "^8.25.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "^7.31.10",
+    "eslint-plugin-storybook": "^0.6.13",
+    "fs-extra": "^11.1.0",
+    "jest": "^27.4.5",
+    "jest-cli": "^27.4.5",
+    "lit": "^2.8.0",
+    "npm-run-all": "^4.1.5",
+    "nx": "^16.8.1",
+    "postcss": "^8.4.18",
+    "prettier": "^2.7.1",
+    "puppeteer": "^15.5.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "storybook": "^7.3.2",
+    "stylelint": "^14.13.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recommended": "^9.0.0",
+    "stylelint-config-sass-guidelines": "^9.0.1",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.9",
+    "webpack": "^5.74.0"
+  },
+  "nx": {
+    "targets": {
+      "start.stencil": {
+        "dependsOn": [
+          {
+            "projects": "dependencies",
+            "target": "build"
+          }
+        ]
+      }
+    }
+  }
+}
