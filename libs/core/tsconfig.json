@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "declaration": false,
+    "experimentalDecorators": true,
+    "lib": ["dom", "es2015", "es2017"],
+    "jsx": "react",
+    "jsxFactory": "h",
+    "moduleResolution": "node",
+    "module": "esnext",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "target": "es2017",
+  },
+  "include": ["src", "scripts"],
+  "exclude": ["node_modules", "**/*.spec.ts", "**/*.spec.tsx", "**/*.e2e.ts", "**/*.stories.mdx", "**/*.stories.ts", "**/*.stories.tsx"]
+}

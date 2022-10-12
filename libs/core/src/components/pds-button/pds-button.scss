@@ -1,0 +1,137 @@
+:host {
+  --border-color: transparent;
+  --border-color-hover: transparent;
+  --border-color-focus: transparent;
+  --border-color-disabled: transparent;
+
+  // primary
+  --background-color-primary: var(--supreme-waffle-color-neutral-charcoal-400);
+  --background-color-hover-primary: var(--supreme-waffle-color-neutral-charcoal-500);
+  --background-color-disabled-primary: var(--supreme-waffle-color-neutral-grey-300);
+  --color-primary: var(--supreme-waffle-color-base-white);
+  --color-disabled-primary: var(--supreme-waffle-color-neutral-charcoal-100);
+  --outline-color-primary: var(--supreme-waffle-color-primary-200);
+
+  // secondary
+  --border-color-secondary: var(--supreme-waffle-color-neutral-grey-400);
+  --border-color-hover-secondary: var(--supreme-waffle-color-neutral-grey-500);
+  --border-color-focus-secondary: var(--supreme-waffle-color-neutral-grey-300);
+  --border-color-disabled-secondary: var(--supreme-waffle-color-neutral-grey-300);
+  --color-secondary: var(--supreme-waffle-color-neutral-charcoal-400);
+  --color-disabled-secondary: var(--supreme-waffle-color-neutral-charcoal-100);
+  --outline-color-secondary: var(--supreme-waffle-color-primary-200);
+
+  // accent
+  --background-color-accent: var(--supreme-waffle-color-primary-300);
+  --background-color-hover-accent: var(--supreme-waffle-color-primary-400);
+  --background-color-disabled-accent: var(--supreme-waffle-color-primary-100);
+  --color-accent: var(--supreme-waffle-color-base-white);
+  --color-disabled-accent: var(--supreme-waffle-color-primary-200);
+  --outline-color-accent: var(--supreme-waffle-color-primary-200);
+
+  // destructive
+  --background-color-destructive: var(--supreme-waffle-color-red-300);
+  --background-color-hover-destructive: var(--supreme-waffle-color-red-400);
+  --background-color-disabled-destructive: var(--supreme-waffle-color-red-100);
+  --color-destructive: var(--supreme-waffle-color-base-white);
+  --color-disabled-destructive: var(--supreme-waffle-color-red-200);
+  --outline-color-destructive: var(--supreme-waffle-color-red-200);
+
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.pds-button {
+  align-items: center;
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  color: var(--color);
+  display: flex;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  min-height: 40px;
+  padding: 0.5rem 1rem;
+
+  pds-icon {
+    fill: currentColor;
+    margin-inline-end: 0.5rem;
+  }
+
+  &:hover {
+    background-color: var(--background-color-hover);
+    border-color: var(--border-color-hover);
+  }
+
+  &:focus {
+    border-color: var(--border-color-focus);
+    outline: 4px solid var(--outline-color);
+  }
+
+  &:disabled {
+    background-color: var(--background-color-disabled);
+    border-color: var(--border-color-disabled);
+    color: var(--color-disabled);
+  }
+}
+
+.pds-button--primary {
+  --background-color: var(--background-color-primary);
+  --background-color-hover: var(--background-color-hover-primary);
+  --background-color-disabled: var(--background-color-disabled-primary);
+  --color: var(--color-primary);
+  --color-disabled: var(--color-disabled-primary);
+  --outline-color: var(--outline-color-primary);
+}
+
+.pds-button--accent {
+  --background-color: var(--background-color-accent);
+  --background-color-hover: var(--background-color-hover-accent);
+  --background-color-disabled: var(--background-color-disabled-accent);
+  --color: var(--color-accent);
+  --color-disabled: var(--color-disabled-accent);
+  --outline-color: var(--outline-color-accent);
+}
+
+.pds-button--destructive {
+  --background-color: var(--background-color-destructive);
+  --background-color-hover: var(--background-color-hover-destructive);
+  --background-color-disabled: var(--background-color-disabled-destructive);
+  --color: var(--color-destructive);
+  --color-disabled: var(--color-disabled-destructive);
+  --outline-color: var(--outline-color-destructive);
+}
+
+.pds-button--secondary,
+.pds-button--disclosure {
+  --background-color: transparent;
+  --background-color-hover: transparent;
+  --background-color-disabled: transparent;
+  --border-color-disabled: var(--border-color-disabled-secondary);
+  --border-color-focus: var(--border-color-focus-secondary);
+  --border-color-hover: var(--border-color-hover-secondary);
+  --border-color: var(--border-color-secondary);
+  --color: var(--color-secondary);
+  --color-disabled: var(--color-disabled-secondary);
+  --outline-color: var(--outline-color-secondary);
+}
+
+.pds-button--disclosure {
+  pds-icon {
+    margin-inline-end: 0;
+    margin-inline-start: 0.5rem;
+  }
+}
+
+.pds-button--unstyled {
+  --background-color: transparent;
+  --background-color-hover: transparent;
+  --background-color-disabled: transparent;
+  --color: inherit;
+  border: 0;
+  margin: 0;
+  min-height: auto;
+  padding: 0;
+  width: inherit;
+}
