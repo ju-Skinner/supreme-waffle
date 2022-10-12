@@ -1,0 +1,5 @@
+**/*.spec.ts
+**/*.spec.tsx
+**/*.e2e.ts
+**/*.stories.*
+stencil.config.ts

@@ -1,0 +1,37 @@
+:host {
+  /**
+   * @prop --panel-margin-top: Optional margin-top for panels
+   */
+  --panel-margin-top: 0;
+
+  /**
+   * @prop --panel-padding: Optional padding for panels
+   */
+  --panel-padding: 0;
+
+  --gap-md: var(--supreme-waffle-spacing-md);
+  --gap-xs: var(--supreme-waffle-spacing-xs);
+  --gap-sm: 16px var(--supreme-waffle-spacing-sm);
+  --outline: 2px solid var(--supreme-waffle-color-primary-200);
+
+  display: block;
+}
+
+// delete later
+*:focus {
+  outline: var(--outline);
+}
+
+.pds-tabs__tablist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-md);
+}
+
+:host(.pds-tabs--availability) .pds-tabs__tablist {
+  gap: var(--gap-xs);
+}
+
+:host(.pds-tabs--filter) .pds-tabs__tablist {
+  gap: var(--gap-sm);
+}
