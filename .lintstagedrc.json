@@ -1,5 +1,8 @@
 {
   "*.{js,jsx,ts,tsx}": [
-    "nx affected --target lint --uncommitted"
+    "nx affected --target lint.ts --uncommitted"
+  ],
+  "*.{css,scss}": [
+    "nx affected --target lint.css --uncommitted"
   ]
 }

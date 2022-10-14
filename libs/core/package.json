@@ -34,7 +34,8 @@
     "build": "yarn build.stencil",
     "build.stencil": "stencil build --docs",
     "start.stencil": "stencil build --dev --watch --serve",
-    "lint": "concurrently \"yarn:lint.ts\"",
+    "lint": "concurrently \"yarn:lint.ts\" \"yarn:lint.css\"",
+    "lint.css": "stylelint \"./src/**/*.*css\"",
     "lint.ts": "eslint src",
     "prettier": "prettier \"./src/**/*.{html,ts,tsx,js,jsx}\"",
     "test": "stencil test --spec --e2e",
@@ -58,8 +59,12 @@
     "jest": "^27.4.5",
     "jest-cli": "^27.4.5",
     "lit-html": "^2.4.0",
+    "postcss": "^8.4.18",
     "prettier": "^2.7.1",
     "puppeteer": "^15.5.0",
+    "stylelint": "^14.13.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard-scss": "^5.0.0",
     "typescript": "^4.8.4"
   }
 }
