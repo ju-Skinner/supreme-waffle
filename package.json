@@ -9,7 +9,8 @@
     "bootstrap": "lerna bootstrap",
     "build.all": "nx run-many --target=build",
     "lint.all": "nx run-many --target=lint",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "start": "nx run core:start"
   },
   "devDependencies": {
     "@nrwl/nx-cloud": "^14.7.0",

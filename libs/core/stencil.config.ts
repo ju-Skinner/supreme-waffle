@@ -5,7 +5,7 @@ import { reactOutputTarget } from '@stencil/react-output-target';
 import { sass } from '@stencil/sass';
 
 export const config: Config = {
-  namespace: 'sage-core',
+  namespace: 'sage-web-components',
   outputTargets: [
     {
       type: 'dist',
@@ -15,6 +15,10 @@ export const config: Config = {
       type: 'dist-custom-elements',
       autoDefineCustomElements: true,
       generateTypeDeclarations: true,
+    },
+    {
+      type: 'docs-json',
+      file: 'docs.json',
     },
     {
       type: 'docs-readme',
