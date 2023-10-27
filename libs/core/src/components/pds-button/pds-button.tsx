@@ -6,6 +6,7 @@ import { hasShadowDom } from '../../utils/utils';
   styleUrl: 'pds-button.scss',
   shadow: true,
 })
+
 export class PdsButton {
   @Element() el: HTMLPdsButtonElement;
 
