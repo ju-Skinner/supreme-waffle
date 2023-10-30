@@ -51,10 +51,6 @@ export namespace Components {
     }
     interface PdsButton {
         /**
-          * A unique identifier used for the underlying component `id` attribute.
-         */
-        "componentId": string;
-        /**
           * Toggles disabled state of button
           * @defaultValue false
          */
@@ -937,10 +933,6 @@ declare namespace LocalJSX {
         "variant"?: 'customer' | 'admin';
     }
     interface PdsButton {
-        /**
-          * A unique identifier used for the underlying component `id` attribute.
-         */
-        "componentId"?: string;
         /**
           * Toggles disabled state of button
           * @defaultValue false
