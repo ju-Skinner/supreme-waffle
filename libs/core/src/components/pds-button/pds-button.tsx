@@ -1,6 +1,9 @@
 import { Component, Element, Host, h, Prop } from '@stencil/core';
 import { hasShadowDom } from '../../utils/utils';
 
+/**
+ * @slot - default to be used for button text
+ */
 @Component({
   tag: 'pds-button',
   styleUrl: 'pds-button.scss',
