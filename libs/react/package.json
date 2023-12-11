@@ -9,17 +9,17 @@
     "components",
     "framework"
   ],
-  "homepage": "https://github.com/ju-skinner/supreme-waffle/tree/main#readme",
+  "homepage": "https://github.com/ju-Skinner/supreme-waffle/tree/main#readme",
   "sideEffects": false,
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ju-skinner/supreme-waffle.git"
+    "url": "git+https://github.com/ju-Skinner/supreme-waffle.git"
   },
   "bugs": {
-    "url": "https://github.com/ju-skinner/supreme-waffle/issues"
+    "url": "https://github.com/ju-Skinner/supreme-waffle/issues"
   },
   "directories": {
     "lib": "lib",
