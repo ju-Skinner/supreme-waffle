@@ -1,0 +1,1119 @@
+{
+  "version": "6.0",
+  "nxVersion": "17.1.3",
+  "deps": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "commitizen": "^4.2.5",
+    "husky": "^8.0.1",
+    "lerna": "^7.0.1",
+    "lint-staged": "^13.0.3",
+    "nx": "^16.8.1",
+    "semver": "^7.3.8",
+    "validate-branch-name": "^1.3.0"
+  },
+  "pathMappings": {
+    "@ju-skinner/supreme-waffle-core": [
+      "./libs/core"
+    ],
+    "@ju-skinner/supreme-waffle-react": [
+      "./react"
+    ]
+  },
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {
+      "@ju-skinner/supreme-waffle-react": [
+        {
+          "file": "libs/react/.gitignore",
+          "hash": "7663861978715868291"
+        },
+        {
+          "file": "libs/react/CHANGELOG.md",
+          "hash": "1750856043472424057"
+        },
+        {
+          "file": "libs/react/LICENSE",
+          "hash": "6940443686931763489"
+        },
+        {
+          "file": "libs/react/README.md",
+          "hash": "8793672237802126472"
+        },
+        {
+          "file": "libs/react/package.json",
+          "hash": "7214039799563526700",
+          "deps": [
+            "npm:@ju-skinner/ideal-octo-sniffle",
+            "@ju-skinner/supreme-waffle-core",
+            "npm:@rollup/plugin-typescript",
+            "npm:@testing-library/jest-dom",
+            "npm:@types/jest",
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:jest",
+            "npm:np",
+            "npm:react",
+            "npm:react-dom",
+            "npm:ts-jest",
+            "npm:typescript"
+          ]
+        },
+        {
+          "file": "libs/react/rollup.config.mjs",
+          "hash": "4814890829784294167"
+        },
+        {
+          "file": "libs/react/src/components/PdsIcon.tsx",
+          "hash": "10199602922567065418"
+        },
+        {
+          "file": "libs/react/src/components/index.ts",
+          "hash": "8960975916534998852"
+        },
+        {
+          "file": "libs/react/src/components/inner-proxies.ts",
+          "hash": "10316038482137034857"
+        },
+        {
+          "file": "libs/react/src/components/proxies.ts",
+          "hash": "7572922391965782199"
+        },
+        {
+          "file": "libs/react/src/components/react-component-lib/createComponent.tsx",
+          "hash": "4096364832743795836"
+        },
+        {
+          "file": "libs/react/src/components/react-component-lib/createOverlayComponent.tsx",
+          "hash": "8773955420217539696"
+        },
+        {
+          "file": "libs/react/src/components/react-component-lib/index.ts",
+          "hash": "1196254052687681421"
+        },
+        {
+          "file": "libs/react/src/components/react-component-lib/interfaces.ts",
+          "hash": "9345528127668002987"
+        },
+        {
+          "file": "libs/react/src/components/react-component-lib/utils/attachProps.ts",
+          "hash": "14941694564617541460"
+        },
+        {
+          "file": "libs/react/src/components/react-component-lib/utils/case.ts",
+          "hash": "8151789878317466138"
+        },
+        {
+          "file": "libs/react/src/components/react-component-lib/utils/dev.ts",
+          "hash": "4726996980237453002"
+        },
+        {
+          "file": "libs/react/src/components/react-component-lib/utils/index.tsx",
+          "hash": "11192276063183013618"
+        },
+        {
+          "file": "libs/react/src/index.ts",
+          "hash": "17645667921992586213"
+        },
+        {
+          "file": "libs/react/tsconfig.json",
+          "hash": "16975761247078069142"
+        }
+      ],
+      "@ju-skinner/supreme-waffle-core": [
+        {
+          "file": "libs/core/.babelrc.json",
+          "hash": "11618967394237866599"
+        },
+        {
+          "file": "libs/core/.editorconfig",
+          "hash": "10872272122097428313"
+        },
+        {
+          "file": "libs/core/.eslintignore",
+          "hash": "11472726772592109745"
+        },
+        {
+          "file": "libs/core/.eslintrc.json",
+          "hash": "251417659970875977"
+        },
+        {
+          "file": "libs/core/.gitignore",
+          "hash": "2380573310413443567"
+        },
+        {
+          "file": "libs/core/.lintstagedrc.json",
+          "hash": "6405154381861287498"
+        },
+        {
+          "file": "libs/core/.prettierignore",
+          "hash": "7706167601732630916"
+        },
+        {
+          "file": "libs/core/.prettierrc.json",
+          "hash": "13201447695190333481"
+        },
+        {
+          "file": "libs/core/.storybook/Theme.js",
+          "hash": "17586939563439219725"
+        },
+        {
+          "file": "libs/core/.storybook/main.js",
+          "hash": "2414811930182629168"
+        },
+        {
+          "file": "libs/core/.storybook/manager-head.html",
+          "hash": "1214549162209619441"
+        },
+        {
+          "file": "libs/core/.storybook/manager.js",
+          "hash": "1593194458007429272"
+        },
+        {
+          "file": "libs/core/.storybook/preview-body.html",
+          "hash": "2614298344358742252"
+        },
+        {
+          "file": "libs/core/.storybook/preview-head.html",
+          "hash": "17531240876535864410"
+        },
+        {
+          "file": "libs/core/.storybook/preview.js",
+          "hash": "13600528146191338845"
+        },
+        {
+          "file": "libs/core/CHANGELOG.md",
+          "hash": "17019205206134712580"
+        },
+        {
+          "file": "libs/core/LICENSE",
+          "hash": "16469975179465296534"
+        },
+        {
+          "file": "libs/core/assets/images/favicon-32x32.png",
+          "hash": "6520413148395370692"
+        },
+        {
+          "file": "libs/core/assets/images/favicon.ico",
+          "hash": "8328376953441129727"
+        },
+        {
+          "file": "libs/core/assets/images/sage-logo.png",
+          "hash": "9783265678974874848"
+        },
+        {
+          "file": "libs/core/docs.d.ts",
+          "hash": "5995455345155363675"
+        },
+        {
+          "file": "libs/core/example.png",
+          "hash": "15886413727287785500"
+        },
+        {
+          "file": "libs/core/package.json",
+          "hash": "14751390026391254022",
+          "deps": [
+            "npm:@ju-skinner/ideal-octo-sniffle",
+            "npm:@stencil/core",
+            "npm:sortablejs",
+            "npm:@babel/core",
+            "npm:@babel/preset-env",
+            "npm:@pxtrn/storybook-addon-docs-stencil",
+            "npm:@stencil-community/eslint-plugin",
+            "npm:@stencil/react-output-target",
+            "npm:@stencil/sass",
+            "npm:@storybook/addon-a11y",
+            "npm:@storybook/addon-actions",
+            "npm:@storybook/addon-essentials",
+            "npm:@storybook/addon-links",
+            "npm:@storybook/web-components",
+            "npm:@storybook/web-components-vite",
+            "npm:@types/jest",
+            "npm:@types/sortablejs",
+            "npm:@typescript-eslint/eslint-plugin",
+            "npm:@typescript-eslint/parser",
+            "npm:babel-loader",
+            "npm:eslint",
+            "npm:eslint-config-prettier",
+            "npm:eslint-plugin-react",
+            "npm:eslint-plugin-storybook",
+            "npm:fs-extra",
+            "npm:jest",
+            "npm:jest-cli",
+            "npm:lit",
+            "npm:npm-run-all",
+            "npm:nx",
+            "npm:postcss",
+            "npm:prettier",
+            "npm:puppeteer",
+            "npm:react",
+            "npm:react-dom",
+            "npm:storybook",
+            "npm:stylelint",
+            "npm:stylelint-config-prettier",
+            "npm:stylelint-config-recommended",
+            "npm:stylelint-config-sass-guidelines",
+            "npm:typescript",
+            "npm:vite",
+            "npm:webpack"
+          ]
+        },
+        {
+          "file": "libs/core/readme.md",
+          "hash": "3132632095453826511"
+        },
+        {
+          "file": "libs/core/scripts/build-tokens.ts",
+          "hash": "3611218719922334021"
+        },
+        {
+          "file": "libs/core/scripts/tsconfig.json",
+          "hash": "9485201419818926808"
+        },
+        {
+          "file": "libs/core/src/components/_internal/pds-label/pds-label.scss",
+          "hash": "5944793389829390313"
+        },
+        {
+          "file": "libs/core/src/components/_internal/pds-label/pds-label.tsx",
+          "hash": "10499539676518309857"
+        },
+        {
+          "file": "libs/core/src/components/pds-avatar/assets/demi_wilkinson.jpg",
+          "hash": "9788299786692759563"
+        },
+        {
+          "file": "libs/core/src/components/pds-avatar/pds-avatar.scss",
+          "hash": "3075246800501373954"
+        },
+        {
+          "file": "libs/core/src/components/pds-avatar/pds-avatar.tsx",
+          "hash": "4214135950869219697"
+        },
+        {
+          "file": "libs/core/src/components/pds-avatar/readme.md",
+          "hash": "988927352637475985"
+        },
+        {
+          "file": "libs/core/src/components/pds-avatar/stories/pds-avatar.docs.mdx",
+          "hash": "16168777915882400425"
+        },
+        {
+          "file": "libs/core/src/components/pds-avatar/stories/pds-avatar.stories.js",
+          "hash": "4451382585985163139"
+        },
+        {
+          "file": "libs/core/src/components/pds-avatar/test/pds-avatar.e2e.ts",
+          "hash": "11977987532538065938"
+        },
+        {
+          "file": "libs/core/src/components/pds-avatar/test/pds-avatar.spec.tsx",
+          "hash": "3226093185480321125"
+        },
+        {
+          "file": "libs/core/src/components/pds-button/pds-button.scss",
+          "hash": "16875927847491009272"
+        },
+        {
+          "file": "libs/core/src/components/pds-button/pds-button.tsx",
+          "hash": "7039915184365809298"
+        },
+        {
+          "file": "libs/core/src/components/pds-button/readme.md",
+          "hash": "10404869673881665246"
+        },
+        {
+          "file": "libs/core/src/components/pds-button/stories/pds-button.docs.mdx",
+          "hash": "6998116921037576399"
+        },
+        {
+          "file": "libs/core/src/components/pds-button/stories/pds-button.stories.js",
+          "hash": "7941423129433328080"
+        },
+        {
+          "file": "libs/core/src/components/pds-button/test/pds-button.e2e.ts",
+          "hash": "12949199146294102221"
+        },
+        {
+          "file": "libs/core/src/components/pds-button/test/pds-button.spec.tsx",
+          "hash": "12132988954555781027"
+        },
+        {
+          "file": "libs/core/src/components/pds-checkbox/pds-checkbox.scss",
+          "hash": "15961640203200765325"
+        },
+        {
+          "file": "libs/core/src/components/pds-checkbox/pds-checkbox.tsx",
+          "hash": "7695116051901059399"
+        },
+        {
+          "file": "libs/core/src/components/pds-checkbox/readme.md",
+          "hash": "6020335958895665316"
+        },
+        {
+          "file": "libs/core/src/components/pds-checkbox/stories/pds-checkbox.docs.mdx",
+          "hash": "10797976180781513483"
+        },
+        {
+          "file": "libs/core/src/components/pds-checkbox/stories/pds-checkbox.stories.js",
+          "hash": "5085834552510876010"
+        },
+        {
+          "file": "libs/core/src/components/pds-checkbox/test/pds-checkbox.e2e.ts",
+          "hash": "14950151628020669891"
+        },
+        {
+          "file": "libs/core/src/components/pds-checkbox/test/pds-checkbox.spec.tsx",
+          "hash": "413466361241161938"
+        },
+        {
+          "file": "libs/core/src/components/pds-chip/pds-chip.scss",
+          "hash": "4237093113499761372"
+        },
+        {
+          "file": "libs/core/src/components/pds-chip/pds-chip.tsx",
+          "hash": "16897268316470233767"
+        },
+        {
+          "file": "libs/core/src/components/pds-chip/readme.md",
+          "hash": "9835285904501466478"
+        },
+        {
+          "file": "libs/core/src/components/pds-chip/stories/pds-chip.docs.mdx",
+          "hash": "5780033631251248654"
+        },
+        {
+          "file": "libs/core/src/components/pds-chip/stories/pds-chip.stories.js",
+          "hash": "13297406204986290521"
+        },
+        {
+          "file": "libs/core/src/components/pds-chip/test/pds-chip.e2e.ts",
+          "hash": "1114765965458486269"
+        },
+        {
+          "file": "libs/core/src/components/pds-chip/test/pds-chip.spec.tsx",
+          "hash": "8591764355388086237"
+        },
+        {
+          "file": "libs/core/src/components/pds-copytext/pds-copytext.scss",
+          "hash": "6185834744289837987"
+        },
+        {
+          "file": "libs/core/src/components/pds-copytext/pds-copytext.tsx",
+          "hash": "10126056656230921193"
+        },
+        {
+          "file": "libs/core/src/components/pds-copytext/readme.md",
+          "hash": "12081147113488074230"
+        },
+        {
+          "file": "libs/core/src/components/pds-copytext/stories/pds-copytext.docs.mdx",
+          "hash": "13657085139897596874"
+        },
+        {
+          "file": "libs/core/src/components/pds-copytext/stories/pds-copytext.stories.js",
+          "hash": "13668646382284843604"
+        },
+        {
+          "file": "libs/core/src/components/pds-copytext/test/pds-copytext.e2e.ts",
+          "hash": "9294464133234788227"
+        },
+        {
+          "file": "libs/core/src/components/pds-copytext/test/pds-copytext.spec.tsx",
+          "hash": "9299744780382650355"
+        },
+        {
+          "file": "libs/core/src/components/pds-divider/pds-divider.scss",
+          "hash": "3780652508691212294"
+        },
+        {
+          "file": "libs/core/src/components/pds-divider/pds-divider.tsx",
+          "hash": "6742844426687322978"
+        },
+        {
+          "file": "libs/core/src/components/pds-divider/readme.md",
+          "hash": "6860530428374477863"
+        },
+        {
+          "file": "libs/core/src/components/pds-divider/stories/pds-divider.docs.mdx",
+          "hash": "4423310863945880123"
+        },
+        {
+          "file": "libs/core/src/components/pds-divider/stories/pds-divider.stories.js",
+          "hash": "2502303063902558089"
+        },
+        {
+          "file": "libs/core/src/components/pds-divider/test/pds-divider.e2e.ts",
+          "hash": "1467782721227940240"
+        },
+        {
+          "file": "libs/core/src/components/pds-divider/test/pds-divider.spec.tsx",
+          "hash": "10847281605953953005"
+        },
+        {
+          "file": "libs/core/src/components/pds-icon/stories/pds-icon.docs.mdx",
+          "hash": "1089521824024716344"
+        },
+        {
+          "file": "libs/core/src/components/pds-icon/stories/pds-icon.stories.js",
+          "hash": "18183599856996346461"
+        },
+        {
+          "file": "libs/core/src/components/pds-image/pds-image.scss",
+          "hash": "2232876367276954984"
+        },
+        {
+          "file": "libs/core/src/components/pds-image/pds-image.tsx",
+          "hash": "18137551421157295132"
+        },
+        {
+          "file": "libs/core/src/components/pds-image/readme.md",
+          "hash": "3000700937157850786"
+        },
+        {
+          "file": "libs/core/src/components/pds-image/stories/pds-image.docs.mdx",
+          "hash": "619652707037646436"
+        },
+        {
+          "file": "libs/core/src/components/pds-image/stories/pds-image.stories.js",
+          "hash": "16295414118833339707"
+        },
+        {
+          "file": "libs/core/src/components/pds-image/test/pds-image.e2e.ts",
+          "hash": "8681614426441923783"
+        },
+        {
+          "file": "libs/core/src/components/pds-image/test/pds-image.spec.tsx",
+          "hash": "12074821794626149897"
+        },
+        {
+          "file": "libs/core/src/components/pds-input/pds-input.scss",
+          "hash": "3665662413953545725"
+        },
+        {
+          "file": "libs/core/src/components/pds-input/pds-input.tsx",
+          "hash": "8572251691699057569"
+        },
+        {
+          "file": "libs/core/src/components/pds-input/readme.md",
+          "hash": "17224648912096219989"
+        },
+        {
+          "file": "libs/core/src/components/pds-input/stories/pds-input.docs.mdx",
+          "hash": "7784414389179601192"
+        },
+        {
+          "file": "libs/core/src/components/pds-input/stories/pds-input.stories.js",
+          "hash": "6130504335055361451"
+        },
+        {
+          "file": "libs/core/src/components/pds-input/test/pds-input.e2e.ts",
+          "hash": "16748108099025407970"
+        },
+        {
+          "file": "libs/core/src/components/pds-input/test/pds-input.spec.tsx",
+          "hash": "1446546589653644635"
+        },
+        {
+          "file": "libs/core/src/components/pds-link/pds-link.scss",
+          "hash": "12434520683017489638"
+        },
+        {
+          "file": "libs/core/src/components/pds-link/pds-link.tsx",
+          "hash": "9529427705698283691"
+        },
+        {
+          "file": "libs/core/src/components/pds-link/readme.md",
+          "hash": "12035309779690330106"
+        },
+        {
+          "file": "libs/core/src/components/pds-link/stories/pds-link.docs.mdx",
+          "hash": "14866047158288937074"
+        },
+        {
+          "file": "libs/core/src/components/pds-link/stories/pds-link.stories.js",
+          "hash": "1159861177522362724"
+        },
+        {
+          "file": "libs/core/src/components/pds-link/test/pds-link.e2e.ts",
+          "hash": "8558374571003035447"
+        },
+        {
+          "file": "libs/core/src/components/pds-link/test/pds-link.spec.tsx",
+          "hash": "10152818793285864799"
+        },
+        {
+          "file": "libs/core/src/components/pds-progress/pds-progress.scss",
+          "hash": "11910617039174209475"
+        },
+        {
+          "file": "libs/core/src/components/pds-progress/pds-progress.tsx",
+          "hash": "3647356323829626221"
+        },
+        {
+          "file": "libs/core/src/components/pds-progress/readme.md",
+          "hash": "10241491333603656859"
+        },
+        {
+          "file": "libs/core/src/components/pds-progress/stories/pds-progress.docs.mdx",
+          "hash": "16531831030933833630"
+        },
+        {
+          "file": "libs/core/src/components/pds-progress/stories/pds-progress.stories.js",
+          "hash": "7736308056737115276"
+        },
+        {
+          "file": "libs/core/src/components/pds-progress/test/pds-progress.e2e.ts",
+          "hash": "9911986283122038225"
+        },
+        {
+          "file": "libs/core/src/components/pds-progress/test/pds-progress.spec.tsx",
+          "hash": "12380488989335173687"
+        },
+        {
+          "file": "libs/core/src/components/pds-radio/pds-radio.scss",
+          "hash": "6300957905254281827"
+        },
+        {
+          "file": "libs/core/src/components/pds-radio/pds-radio.tsx",
+          "hash": "11686080935115820258"
+        },
+        {
+          "file": "libs/core/src/components/pds-radio/readme.md",
+          "hash": "16978480427989749772"
+        },
+        {
+          "file": "libs/core/src/components/pds-radio/stories/pds-radio.docs.mdx",
+          "hash": "10647684290177167788"
+        },
+        {
+          "file": "libs/core/src/components/pds-radio/stories/pds-radio.stories.js",
+          "hash": "14662494310118030540"
+        },
+        {
+          "file": "libs/core/src/components/pds-radio/test/pds-radio.e2e.ts",
+          "hash": "14536751772272838606"
+        },
+        {
+          "file": "libs/core/src/components/pds-radio/test/pds-radio.spec.tsx",
+          "hash": "4120224445899521595"
+        },
+        {
+          "file": "libs/core/src/components/pds-sortable/pds-sortable-item/pds-sortable-item.scss",
+          "hash": "10733146802593251255"
+        },
+        {
+          "file": "libs/core/src/components/pds-sortable/pds-sortable-item/pds-sortable-item.tsx",
+          "hash": "10858709749429255558"
+        },
+        {
+          "file": "libs/core/src/components/pds-sortable/pds-sortable-item/readme.md",
+          "hash": "8741938935516999414"
+        },
+        {
+          "file": "libs/core/src/components/pds-sortable/pds-sortable-item/stories/pds-sortable-item.stories.js",
+          "hash": "12058755100660508129"
+        },
+        {
+          "file": "libs/core/src/components/pds-sortable/pds-sortable-item/test/pds-sortable-item.spec.tsx",
+          "hash": "17741111231533984901"
+        },
+        {
+          "file": "libs/core/src/components/pds-sortable/pds-sortable.scss",
+          "hash": "8174631167078019982"
+        },
+        {
+          "file": "libs/core/src/components/pds-sortable/pds-sortable.tsx",
+          "hash": "14506447075664987637"
+        },
+        {
+          "file": "libs/core/src/components/pds-sortable/readme.md",
+          "hash": "2615228378507379352"
+        },
+        {
+          "file": "libs/core/src/components/pds-sortable/stories/pds-sortable.docs.mdx",
+          "hash": "1050830932303399834"
+        },
+        {
+          "file": "libs/core/src/components/pds-sortable/stories/pds-sortable.stories.js",
+          "hash": "7334143624401018279"
+        },
+        {
+          "file": "libs/core/src/components/pds-sortable/test/pds-sortable.e2e.ts",
+          "hash": "4934072881286725340"
+        },
+        {
+          "file": "libs/core/src/components/pds-sortable/test/pds-sortable.spec.tsx",
+          "hash": "2523650327216196263"
+        },
+        {
+          "file": "libs/core/src/components/pds-switch/pds-switch.scss",
+          "hash": "61674740031179631"
+        },
+        {
+          "file": "libs/core/src/components/pds-switch/pds-switch.tsx",
+          "hash": "7526844439302520248"
+        },
+        {
+          "file": "libs/core/src/components/pds-switch/readme.md",
+          "hash": "5849837429435649449"
+        },
+        {
+          "file": "libs/core/src/components/pds-switch/stories/pds-switch.docs.mdx",
+          "hash": "3475911709499666847"
+        },
+        {
+          "file": "libs/core/src/components/pds-switch/stories/pds-switch.stories.js",
+          "hash": "5884169260856587503"
+        },
+        {
+          "file": "libs/core/src/components/pds-switch/test/pds-switch.e2e.ts",
+          "hash": "2022629216515289947"
+        },
+        {
+          "file": "libs/core/src/components/pds-switch/test/pds-switch.spec.tsx",
+          "hash": "9009000351868029987"
+        },
+        {
+          "file": "libs/core/src/components/pds-tabs/pds-tab/pds-tab.scss",
+          "hash": "10841598333170044248"
+        },
+        {
+          "file": "libs/core/src/components/pds-tabs/pds-tab/pds-tab.tsx",
+          "hash": "13480136868840393121"
+        },
+        {
+          "file": "libs/core/src/components/pds-tabs/pds-tab/readme.md",
+          "hash": "10603173680240632268"
+        },
+        {
+          "file": "libs/core/src/components/pds-tabs/pds-tab/test/pds-tab.e2e.ts",
+          "hash": "9119344859534643522"
+        },
+        {
+          "file": "libs/core/src/components/pds-tabs/pds-tab/test/pds-tab.spec.tsx",
+          "hash": "7756985689272699759"
+        },
+        {
+          "file": "libs/core/src/components/pds-tabs/pds-tabpanel/pds-tabpanel.scss",
+          "hash": "2571526105417881914"
+        },
+        {
+          "file": "libs/core/src/components/pds-tabs/pds-tabpanel/pds-tabpanel.tsx",
+          "hash": "17485186190394351432"
+        },
+        {
+          "file": "libs/core/src/components/pds-tabs/pds-tabpanel/readme.md",
+          "hash": "7724688991563931577"
+        },
+        {
+          "file": "libs/core/src/components/pds-tabs/pds-tabpanel/test/pds-tabpanel.e2e.ts",
+          "hash": "5298393389117864997"
+        },
+        {
+          "file": "libs/core/src/components/pds-tabs/pds-tabpanel/test/pds-tabpanel.spec.tsx",
+          "hash": "666976038831221928"
+        },
+        {
+          "file": "libs/core/src/components/pds-tabs/pds-tabs.scss",
+          "hash": "13190254432912912175"
+        },
+        {
+          "file": "libs/core/src/components/pds-tabs/pds-tabs.tsx",
+          "hash": "13417638416300531438"
+        },
+        {
+          "file": "libs/core/src/components/pds-tabs/readme.md",
+          "hash": "6371764655556523674"
+        },
+        {
+          "file": "libs/core/src/components/pds-tabs/stories/pds-tabs.docs.mdx",
+          "hash": "14435936686028177735"
+        },
+        {
+          "file": "libs/core/src/components/pds-tabs/stories/pds-tabs.stories.js",
+          "hash": "13312727103651174100"
+        },
+        {
+          "file": "libs/core/src/components/pds-tabs/test/pds-tabs.e2e.ts",
+          "hash": "6610374105013927409"
+        },
+        {
+          "file": "libs/core/src/components/pds-tabs/test/pds-tabs.spec.tsx",
+          "hash": "13411802896778404780"
+        },
+        {
+          "file": "libs/core/src/components/pds-textarea/pds-textarea.scss",
+          "hash": "18140414404393785166"
+        },
+        {
+          "file": "libs/core/src/components/pds-textarea/pds-textarea.tsx",
+          "hash": "10029112580720221406"
+        },
+        {
+          "file": "libs/core/src/components/pds-textarea/readme.md",
+          "hash": "7607541819155151650"
+        },
+        {
+          "file": "libs/core/src/components/pds-textarea/stories/pds-textarea.docs.mdx",
+          "hash": "17844141065488052439"
+        },
+        {
+          "file": "libs/core/src/components/pds-textarea/stories/pds-textarea.stories.js",
+          "hash": "9008214700066004629"
+        },
+        {
+          "file": "libs/core/src/components/pds-textarea/test/pds-textarea.e2e.ts",
+          "hash": "11684239105879633342"
+        },
+        {
+          "file": "libs/core/src/components/pds-textarea/test/pds-textarea.spec.tsx",
+          "hash": "13035700218238526499"
+        },
+        {
+          "file": "libs/core/src/components/pds-textarea/textarea-interface.ts",
+          "hash": "2192879085341877604"
+        },
+        {
+          "file": "libs/core/src/components/pds-tooltip/pds-tooltip.scss",
+          "hash": "16750606678059664942"
+        },
+        {
+          "file": "libs/core/src/components/pds-tooltip/pds-tooltip.tsx",
+          "hash": "7388181450218334220"
+        },
+        {
+          "file": "libs/core/src/components/pds-tooltip/readme.md",
+          "hash": "5058693123751035938"
+        },
+        {
+          "file": "libs/core/src/components/pds-tooltip/stories/pds-tooltip.docs.mdx",
+          "hash": "15339000897522292599"
+        },
+        {
+          "file": "libs/core/src/components/pds-tooltip/stories/pds-tooltip.stories.js",
+          "hash": "17985946991921618666"
+        },
+        {
+          "file": "libs/core/src/components/pds-tooltip/test/pds-tooltip.e2e.ts",
+          "hash": "9240119368164968178"
+        },
+        {
+          "file": "libs/core/src/components/pds-tooltip/test/pds-tooltip.spec.tsx",
+          "hash": "3532022425717756296"
+        },
+        {
+          "file": "libs/core/src/components.d.ts",
+          "hash": "2821641077069996805"
+        },
+        {
+          "file": "libs/core/src/global/pine-ui-global.ts",
+          "hash": "11400104890964469878"
+        },
+        {
+          "file": "libs/core/src/global/styles/_fonts.scss",
+          "hash": "17265722442241458619"
+        },
+        {
+          "file": "libs/core/src/global/styles/app.scss",
+          "hash": "12806525291575916941"
+        },
+        {
+          "file": "libs/core/src/global/styles/tokens/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/core/src/global/styles/tokens/_border-radius.scss",
+          "hash": "8739911570278802049"
+        },
+        {
+          "file": "libs/core/src/global/styles/tokens/_border.scss",
+          "hash": "1636189294726840205"
+        },
+        {
+          "file": "libs/core/src/global/styles/tokens/_box-shadow.scss",
+          "hash": "17690573971414269541"
+        },
+        {
+          "file": "libs/core/src/global/styles/tokens/_color.scss",
+          "hash": "10437969626507312705"
+        },
+        {
+          "file": "libs/core/src/global/styles/tokens/_font-family.scss",
+          "hash": "16379870125040567180"
+        },
+        {
+          "file": "libs/core/src/global/styles/tokens/_font-size.scss",
+          "hash": "4026666238160771718"
+        },
+        {
+          "file": "libs/core/src/global/styles/tokens/_font-weight.scss",
+          "hash": "10885248225436572767"
+        },
+        {
+          "file": "libs/core/src/global/styles/tokens/_letter-spacing.scss",
+          "hash": "10356611517218826749"
+        },
+        {
+          "file": "libs/core/src/global/styles/tokens/_line-height.scss",
+          "hash": "171915155200754722"
+        },
+        {
+          "file": "libs/core/src/global/styles/tokens/_spacing.scss",
+          "hash": "1955342822241849629"
+        },
+        {
+          "file": "libs/core/src/global/styles/tokens/index.scss",
+          "hash": "6678383228812488680"
+        },
+        {
+          "file": "libs/core/src/index.ts",
+          "hash": "11400104890964469878"
+        },
+        {
+          "file": "libs/core/src/interface.d.ts",
+          "hash": "6037432359509981293"
+        },
+        {
+          "file": "libs/core/src/stories/_helpers/index.ts",
+          "hash": "2139613949094844635"
+        },
+        {
+          "file": "libs/core/src/stories/colors.docs.mdx",
+          "hash": "9708112072379269527"
+        },
+        {
+          "file": "libs/core/src/stories/contributing.docs.mdx",
+          "hash": "5440004736951150714"
+        },
+        {
+          "file": "libs/core/src/stories/principles.docs.mdx",
+          "hash": "13459882362350898690"
+        },
+        {
+          "file": "libs/core/src/stories/support.docs.mdx",
+          "hash": "18347387380442235087"
+        },
+        {
+          "file": "libs/core/src/stories/typography.docs.mdx",
+          "hash": "5012322811108348589"
+        },
+        {
+          "file": "libs/core/src/stories/welcome.docs.mdx",
+          "hash": "4882413319117261181"
+        },
+        {
+          "file": "libs/core/src/utils/form.ts",
+          "hash": "6870311567204562296"
+        },
+        {
+          "file": "libs/core/src/utils/overlay.ts",
+          "hash": "10637536306850107891"
+        },
+        {
+          "file": "libs/core/src/utils/test/form.spec.ts",
+          "hash": "16530400375151954846"
+        },
+        {
+          "file": "libs/core/src/utils/test/overlay.spec.ts",
+          "hash": "74154874193920012"
+        },
+        {
+          "file": "libs/core/src/utils/types.ts",
+          "hash": "8256705204210746202"
+        },
+        {
+          "file": "libs/core/src/utils/utils.spec.ts",
+          "hash": "3526916203779094930"
+        },
+        {
+          "file": "libs/core/src/utils/utils.ts",
+          "hash": "1808746459574096699"
+        },
+        {
+          "file": "libs/core/stencil.config.ts",
+          "hash": "1387357735233284076"
+        },
+        {
+          "file": "libs/core/tokens/tokens.json",
+          "hash": "16385471824776191843"
+        },
+        {
+          "file": "libs/core/tsconfig.json",
+          "hash": "981499814732759339"
+        }
+      ]
+    },
+    "nonProjectFiles": [
+      {
+        "file": ".commitlintrc",
+        "hash": "9743403318255290774"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "5105262659744598019"
+      },
+      {
+        "file": ".github/ISSUE_TEMPLATE/accessibility.md",
+        "hash": "2074775413046290723"
+      },
+      {
+        "file": ".github/ISSUE_TEMPLATE/bug_report.md",
+        "hash": "3849228928275314058"
+      },
+      {
+        "file": ".github/ISSUE_TEMPLATE/config.yml",
+        "hash": "17858606678031151155"
+      },
+      {
+        "file": ".github/ISSUE_TEMPLATE/feature_request.md",
+        "hash": "11508476703754506534"
+      },
+      {
+        "file": ".github/labeler.yml",
+        "hash": "6982808597894861886"
+      },
+      {
+        "file": ".github/pull_request_template.md",
+        "hash": "11184996495318077780"
+      },
+      {
+        "file": ".github/workflows/actions/build-core/action.yml",
+        "hash": "11017552789114657558"
+      },
+      {
+        "file": ".github/workflows/actions/download-archive/action.yml",
+        "hash": "11405498129410246312"
+      },
+      {
+        "file": ".github/workflows/actions/publish-npm/action.yml",
+        "hash": "17600046495838398786"
+      },
+      {
+        "file": ".github/workflows/actions/test-lint/action.yml",
+        "hash": "7659133052720822704"
+      },
+      {
+        "file": ".github/workflows/actions/test-spec/action.yml",
+        "hash": "7231885326390077336"
+      },
+      {
+        "file": ".github/workflows/actions/upload-archive/action.yml",
+        "hash": "16693660160188534131"
+      },
+      {
+        "file": ".github/workflows/build.yml",
+        "hash": "1902567869496480014"
+      },
+      {
+        "file": ".github/workflows/dependency-review.yml",
+        "hash": "12048620223785355437"
+      },
+      {
+        "file": ".github/workflows/label.yml",
+        "hash": "12850875084039628997"
+      },
+      {
+        "file": ".github/workflows/release-packages.yml",
+        "hash": "1775351479642642583"
+      },
+      {
+        "file": ".github/workflows/release-please.yml",
+        "hash": "1115227219049306072"
+      },
+      {
+        "file": ".github/workflows/release.yml",
+        "hash": "12730999946744091913"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "12609205339920480219"
+      },
+      {
+        "file": ".husky/commit-msg",
+        "hash": "3482757574253108806"
+      },
+      {
+        "file": ".husky/pre-commit",
+        "hash": "1017490112518240567"
+      },
+      {
+        "file": ".husky/pre-push",
+        "hash": "16803216629386368683"
+      },
+      {
+        "file": ".nvmrc",
+        "hash": "14743000810602433389"
+      },
+      {
+        "file": ".nx/cache/file-map.json",
+        "hash": "13069507184916630884"
+      },
+      {
+        "file": ".nx/cache/lockfile.hash",
+        "hash": "10328244891992721729"
+      },
+      {
+        "file": ".nx/cache/parsed-lock-file.json",
+        "hash": "17152082565002321306"
+      },
+      {
+        "file": ".nx/cache/project-graph.json",
+        "hash": "11506193200021637524"
+      },
+      {
+        "file": ".release-please-manifest.json",
+        "hash": "5677599742105527047"
+      },
+      {
+        "file": ".scripts/prepare.js",
+        "hash": "12647028314943236706"
+      },
+      {
+        "file": "README.md",
+        "hash": "15770598149506452541"
+      },
+      {
+        "file": "apps/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "lerna.json",
+        "hash": "16780474624735480251"
+      },
+      {
+        "file": "libs/.stylelintignore",
+        "hash": "10488322868289972187"
+      },
+      {
+        "file": "libs/.stylelintrc.json",
+        "hash": "12715858484763928352"
+      },
+      {
+        "file": "nx.json",
+        "hash": "886092881492983251"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "6171126125049098399"
+      },
+      {
+        "file": "package.json",
+        "hash": "988083745844636671"
+      },
+      {
+        "file": "release-please-config.json",
+        "hash": "4062270267063517714"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "11903627139324804235"
+      },
+      {
+        "file": "validate-branch-name.config.js",
+        "hash": "16491222938765752269"
+      }
+    ]
+  }
+}
