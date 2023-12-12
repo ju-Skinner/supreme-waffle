@@ -37,8 +37,6 @@ export const config: Config = {
     },
     reactOutputTarget({
       componentCorePackage: '@ju-skinner/supreme-waffle-core',
-      includeDefineCustomElements: true,
-      includePolyfills: true,
       proxiesFile: '../../libs/react/src/components/proxies.ts',
     }),
   ],
