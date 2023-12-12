@@ -14,6 +14,10 @@
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ju-Skinner/supreme-waffle.git"
@@ -26,20 +30,20 @@
     "test": "__tests__"
   },
   "files": [
-    "dist/"
+    "dist"
   ],
   "scripts": {
     "build": "npm run clean && npm run compile",
     "clean": "rm -rf dist",
-    "compile": "npm run tsc",
-    "tsc": "tsc -p .",
-    "rollup": "rollup -c"
+    "compile": "rollup -c",
+    "tsc": "tsc -p . --outdir ./dist"
   },
   "dependencies": {
-    "@ju-skinner/supreme-waffle-core": "*",
-    "@ju-skinner/ideal-octo-sniffle": "2.0.3-alpha.0"
+    "@ju-skinner/ideal-octo-sniffle": "3.0.0",
+    "@ju-skinner/supreme-waffle-core": "*"
   },
   "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.5",
     "@testing-library/jest-dom": "^6.1.3",
     "@types/jest": "^29.1.2",
     "@types/node": "^18.8.4",
