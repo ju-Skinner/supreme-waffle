@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.2-alpha.8](https://github.com/ju-Skinner/supreme-waffle/compare/@ju-skinner/supreme-waffle-core@0.0.2-alpha.7...@ju-skinner/supreme-waffle-core@0.0.2-alpha.8) (2024-01-05)
+
+
+### Bug Fixes
+
+* **pds-link:** icons should be imported and set via icon property ([8650929](https://github.com/ju-Skinner/supreme-waffle/commit/8650929ecf6561df0b182d451d066f7b126be9a1))
+
+
+
+
+
 ## 0.0.2-alpha.7 (2023-12-15)
 
 

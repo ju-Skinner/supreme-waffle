@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.2-alpha.8](https://github.com/ju-Skinner/supreme-waffle/compare/@ju-skinner/supreme-waffle-react@0.0.2-alpha.7...@ju-skinner/supreme-waffle-react@0.0.2-alpha.8) (2024-01-05)
+
+
+### Bug Fixes
+
+* **react:** add missing exports ([cea33b9](https://github.com/ju-Skinner/supreme-waffle/commit/cea33b9b360993cafbc8be7cb547e3b2a3338336))
+
+
+
+
+
 ## 0.0.2-alpha.7 (2023-12-15)
 
 
