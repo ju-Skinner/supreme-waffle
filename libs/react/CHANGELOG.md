@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.0.0 (2024-01-05)
+
+
+### Features
+
+* **react:** Add PdsIcon helper ([615940f](https://github.com/ju-Skinner/supreme-waffle/commit/615940f1817d7aa68e6124eae076958c22fe90aa))
+
+
+### Bug Fixes
+
+* **react:** Add missing exports ([cea33b9](https://github.com/ju-Skinner/supreme-waffle/commit/cea33b9b360993cafbc8be7cb547e3b2a3338336))
+* Versions ([6307167](https://github.com/ju-Skinner/supreme-waffle/commit/630716711abf92fcd82bedf94445742512799f57))
+
 ## 0.0.2-alpha.7 (2023-12-15)
 
 
