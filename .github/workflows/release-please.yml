@@ -15,11 +15,10 @@ jobs:
     outputs:
       paths_released: ${{ steps.manifest-release.outputs.paths_released }}
     steps:
-      - uses: google-github-actions/release-please-action@v3
+      - uses: google-github-actions/release-please-action@v4
         id: manifest-release
         with:
-          command: manifest
-          monorepo-tags: true
+          manifest-file: .release-please-manifest.json
 
       - name: Show output from Release-Please
         if: ${{ steps.manifest-release.outputs.releases_created }}
@@ -33,3 +32,14 @@ jobs:
           echo "patch: ${{ steps.manifest-release.outputs.patch }}"
           echo "sha: ${{ steps.manifest-release.outputs.sha }}"
           echo "pr: ${{ steps.manifest-release.outputs.pr }}"
+
+      - name: Checkout
+        if: ${{ steps.manifest-release.outputs.releases_created }}
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Release Packages
+        if: ${{ steps.manifest-release.outputs.releases_created }}
+        uses: ./.github/workflows/release-packages.yml
+
