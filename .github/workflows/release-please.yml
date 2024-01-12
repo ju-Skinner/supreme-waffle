@@ -14,17 +14,22 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       paths_released: ${{ steps.manifest-release.outputs.paths_released }}
+      releases_created: ${{ steps.manifest-release.outputs.releases_created }}
     steps:
-      - uses: google-github-actions/release-please-action@v3
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: google-github-actions/release-please-action@v4
         id: manifest-release
         with:
-          command: manifest
-          monorepo-tags: true
+          manifest-file: .release-please-manifest.json
 
       - name: Show output from Release-Please
-        if: ${{ steps.manifest-release.outputs.releases_created }}
         run: |
           echo "release_created: ${{ steps.manifest-release.outputs.release_created }}"
+          echo "paths_released: ${{ steps.manifest-release.outputs.paths_released }}"
           echo "upload_url: ${{ steps.manifest-release.outputs.upload_url }}"
           echo "html_url: ${{ steps.manifest-release.outputs.html_url }}"
           echo "tag_name: ${{ steps.manifest-release.outputs.tag_name }}"
@@ -32,4 +37,18 @@ jobs:
           echo "minor: ${{ steps.manifest-release.outputs.minor }}"
           echo "patch: ${{ steps.manifest-release.outputs.patch }}"
           echo "sha: ${{ steps.manifest-release.outputs.sha }}"
-          echo "pr: ${{ steps.manifest-release.outputs.pr }}"
+          echo "RELEASES_created: ${{ steps.manifest-release.outputs.releases_created }}"
+
+  release-packages:
+    runs-on: ubuntu-latest
+    needs: release-please
+    if: ${{ needs.release-please.outputs.releases_created == 'true'}}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Release Packages
+        uses: ./.github/workflows/release-packages.yml
+

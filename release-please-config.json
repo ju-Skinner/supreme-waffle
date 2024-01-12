@@ -4,8 +4,12 @@
   "bump-patch-for-minor-pre-major": false,
   "include-v-in-tag": true,
   "packages": {
-    "libs/core": {},
-    "libs/react": {}
+    "libs/core": {
+      "prerelease": true
+    },
+    "libs/react": {
+      "prerelease": true
+    }
   },
   "plugins": [
     "sentence-case"
