@@ -1,5 +1,5 @@
 {
-  "libs/core": "0.1.0-alpha.9",
-  "libs/react": "0.1.0-alpha.9",
+  "libs/core": "0.2.0-alpha.9",
+  "libs/react": "0.2.0-alpha.9",
   ".": "0.0.0"
 }
