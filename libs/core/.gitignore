@@ -1,8 +1,7 @@
 dist/
 www/
 loader/
-components/
-css/
+/components/
 
 scripts/**/*.js
 
