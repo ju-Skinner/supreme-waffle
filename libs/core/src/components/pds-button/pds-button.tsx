@@ -10,11 +10,6 @@ export class PdsButton {
   @Element() el: HTMLPdsButtonElement;
 
   /**
-   * A unique identifier used for the underlying component `id` attribute.
-   */
-  @Prop() componentId: string;
-
-  /**
    * Toggles disabled state of button
    * @defaultValue false
    */
@@ -79,7 +74,6 @@ export class PdsButton {
     return (
       <Host
         aria-disabled={this.disabled ? 'true' : null}
-        id={this.componentId}
         onClick={this.handleClick}
         variant={this.variant}
       >
