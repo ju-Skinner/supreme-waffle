@@ -5,7 +5,9 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { CheckboxChangeEventDetail } from "./components/pds-checkbox/checkbox-interface";
 import { TextareaChangeEventDetail } from "./components/pds-textarea/textarea-interface";
+export { CheckboxChangeEventDetail } from "./components/pds-checkbox/checkbox-interface";
 export { TextareaChangeEventDetail } from "./components/pds-textarea/textarea-interface";
 export namespace Components {
     interface PdsAvatar {
@@ -114,6 +116,10 @@ export namespace Components {
           * String used for label text next to checkbox.
          */
         "label": string;
+        /**
+          * Visually hides the label text for instances where only the checkbox should be displayed. Label remains accessible to assistive technology such as screen readers.
+         */
+        "labelHidden": boolean;
         /**
           * String used for checkbox `name` attribute.
          */
@@ -474,6 +480,46 @@ export namespace Components {
         "selected": boolean;
         "variant": string;
     }
+    interface PdsTable {
+        /**
+          * Determines if table displays compact which reduces the spacing of table cells.
+         */
+        "compact": boolean;
+        /**
+          * A unique identifier used for the table `id` attribute.
+         */
+        "componentId": string;
+        /**
+          * Determines if table displays fixed column which fixes the first column of the table.
+         */
+        "fixedColumn": boolean;
+        /**
+          * Enables the table to be responsive by horizontally scrolling on smaller screens.
+         */
+        "responsive": boolean;
+        /**
+          * Determines if table displays checkboxes for selectable rows.
+         */
+        "selectable": boolean;
+    }
+    interface PdsTableBody {
+    }
+    interface PdsTableCell {
+        /**
+          * Truncates content to a max width of 100px and adds an ellipsis.
+         */
+        "truncate": boolean;
+    }
+    interface PdsTableHead {
+    }
+    interface PdsTableHeadCell {
+        /**
+          * Determines whether the table column is sortable when set to `true`.
+         */
+        "sortable": boolean;
+    }
+    interface PdsTableRow {
+    }
     interface PdsTabpanel {
         /**
           * Sets the related tab name, this name must match a `pds-tab`'s tab name property
@@ -638,6 +684,14 @@ export interface PdsTabCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLPdsTabElement;
 }
+export interface PdsTableHeadCellCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLPdsTableHeadCellElement;
+}
+export interface PdsTableRowCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLPdsTableRowElement;
+}
 export interface PdsTextareaCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLPdsTextareaElement;
@@ -660,7 +714,7 @@ declare global {
         new (): HTMLPdsButtonElement;
     };
     interface HTMLPdsCheckboxElementEventMap {
-        "pdsCheckboxChange": boolean;
+        "pdsCheckboxChange": CheckboxChangeEventDetail;
     }
     interface HTMLPdsCheckboxElement extends Components.PdsCheckbox, HTMLStencilElement {
         addEventListener<K extends keyof HTMLPdsCheckboxElementEventMap>(type: K, listener: (this: HTMLPdsCheckboxElement, ev: PdsCheckboxCustomEvent<HTMLPdsCheckboxElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
@@ -825,6 +879,64 @@ declare global {
         prototype: HTMLPdsTabElement;
         new (): HTMLPdsTabElement;
     };
+    interface HTMLPdsTableElement extends Components.PdsTable, HTMLStencilElement {
+    }
+    var HTMLPdsTableElement: {
+        prototype: HTMLPdsTableElement;
+        new (): HTMLPdsTableElement;
+    };
+    interface HTMLPdsTableBodyElement extends Components.PdsTableBody, HTMLStencilElement {
+    }
+    var HTMLPdsTableBodyElement: {
+        prototype: HTMLPdsTableBodyElement;
+        new (): HTMLPdsTableBodyElement;
+    };
+    interface HTMLPdsTableCellElement extends Components.PdsTableCell, HTMLStencilElement {
+    }
+    var HTMLPdsTableCellElement: {
+        prototype: HTMLPdsTableCellElement;
+        new (): HTMLPdsTableCellElement;
+    };
+    interface HTMLPdsTableHeadElement extends Components.PdsTableHead, HTMLStencilElement {
+    }
+    var HTMLPdsTableHeadElement: {
+        prototype: HTMLPdsTableHeadElement;
+        new (): HTMLPdsTableHeadElement;
+    };
+    interface HTMLPdsTableHeadCellElementEventMap {
+        "pdsTableSort": { column: string; direction: string };
+    }
+    interface HTMLPdsTableHeadCellElement extends Components.PdsTableHeadCell, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLPdsTableHeadCellElementEventMap>(type: K, listener: (this: HTMLPdsTableHeadCellElement, ev: PdsTableHeadCellCustomEvent<HTMLPdsTableHeadCellElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLPdsTableHeadCellElementEventMap>(type: K, listener: (this: HTMLPdsTableHeadCellElement, ev: PdsTableHeadCellCustomEvent<HTMLPdsTableHeadCellElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLPdsTableHeadCellElement: {
+        prototype: HTMLPdsTableHeadCellElement;
+        new (): HTMLPdsTableHeadCellElement;
+    };
+    interface HTMLPdsTableRowElementEventMap {
+        "pdsTableRowSelected": { rowIndex: number; isSelected: boolean; };
+    }
+    interface HTMLPdsTableRowElement extends Components.PdsTableRow, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLPdsTableRowElementEventMap>(type: K, listener: (this: HTMLPdsTableRowElement, ev: PdsTableRowCustomEvent<HTMLPdsTableRowElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLPdsTableRowElementEventMap>(type: K, listener: (this: HTMLPdsTableRowElement, ev: PdsTableRowCustomEvent<HTMLPdsTableRowElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLPdsTableRowElement: {
+        prototype: HTMLPdsTableRowElement;
+        new (): HTMLPdsTableRowElement;
+    };
     interface HTMLPdsTabpanelElement extends Components.PdsTabpanel, HTMLStencilElement {
     }
     var HTMLPdsTabpanelElement: {
@@ -888,6 +1000,12 @@ declare global {
         "pds-sortable-item": HTMLPdsSortableItemElement;
         "pds-switch": HTMLPdsSwitchElement;
         "pds-tab": HTMLPdsTabElement;
+        "pds-table": HTMLPdsTableElement;
+        "pds-table-body": HTMLPdsTableBodyElement;
+        "pds-table-cell": HTMLPdsTableCellElement;
+        "pds-table-head": HTMLPdsTableHeadElement;
+        "pds-table-head-cell": HTMLPdsTableHeadCellElement;
+        "pds-table-row": HTMLPdsTableRowElement;
         "pds-tabpanel": HTMLPdsTabpanelElement;
         "pds-tabs": HTMLPdsTabsElement;
         "pds-textarea": HTMLPdsTextareaElement;
@@ -1002,13 +1120,17 @@ declare namespace LocalJSX {
          */
         "label"?: string;
         /**
+          * Visually hides the label text for instances where only the checkbox should be displayed. Label remains accessible to assistive technology such as screen readers.
+         */
+        "labelHidden"?: boolean;
+        /**
           * String used for checkbox `name` attribute.
          */
         "name"?: string;
         /**
-          * Emits a boolean indicating whether the checkbox is currently checked or unchecked.
+          * Event emitted that contains the `value` and `checked`.
          */
-        "onPdsCheckboxChange"?: (event: PdsCheckboxCustomEvent<boolean>) => void;
+        "onPdsCheckboxChange"?: (event: PdsCheckboxCustomEvent<CheckboxChangeEventDetail>) => void;
         /**
           * It determines whether or not the checkbox is required.
          */
@@ -1390,6 +1512,54 @@ declare namespace LocalJSX {
         "selected"?: boolean;
         "variant"?: string;
     }
+    interface PdsTable {
+        /**
+          * Determines if table displays compact which reduces the spacing of table cells.
+         */
+        "compact"?: boolean;
+        /**
+          * A unique identifier used for the table `id` attribute.
+         */
+        "componentId": string;
+        /**
+          * Determines if table displays fixed column which fixes the first column of the table.
+         */
+        "fixedColumn"?: boolean;
+        /**
+          * Enables the table to be responsive by horizontally scrolling on smaller screens.
+         */
+        "responsive"?: boolean;
+        /**
+          * Determines if table displays checkboxes for selectable rows.
+         */
+        "selectable"?: boolean;
+    }
+    interface PdsTableBody {
+    }
+    interface PdsTableCell {
+        /**
+          * Truncates content to a max width of 100px and adds an ellipsis.
+         */
+        "truncate"?: boolean;
+    }
+    interface PdsTableHead {
+    }
+    interface PdsTableHeadCell {
+        /**
+          * Event emitted to signal that a table column header has been sorted, providing information about the sorted column's name and sorting direction.
+         */
+        "onPdsTableSort"?: (event: PdsTableHeadCellCustomEvent<{ column: string; direction: string }>) => void;
+        /**
+          * Determines whether the table column is sortable when set to `true`.
+         */
+        "sortable"?: boolean;
+    }
+    interface PdsTableRow {
+        /**
+          * Event that is emitted when the checkbox is clicked, carrying the selected value.
+         */
+        "onPdsTableRowSelected"?: (event: PdsTableRowCustomEvent<{ rowIndex: number; isSelected: boolean; }>) => void;
+    }
     interface PdsTabpanel {
         /**
           * Sets the related tab name, this name must match a `pds-tab`'s tab name property
@@ -1541,6 +1711,12 @@ declare namespace LocalJSX {
         "pds-sortable-item": PdsSortableItem;
         "pds-switch": PdsSwitch;
         "pds-tab": PdsTab;
+        "pds-table": PdsTable;
+        "pds-table-body": PdsTableBody;
+        "pds-table-cell": PdsTableCell;
+        "pds-table-head": PdsTableHead;
+        "pds-table-head-cell": PdsTableHeadCell;
+        "pds-table-row": PdsTableRow;
         "pds-tabpanel": PdsTabpanel;
         "pds-tabs": PdsTabs;
         "pds-textarea": PdsTextarea;
@@ -1566,6 +1742,12 @@ declare module "@stencil/core" {
             "pds-sortable-item": LocalJSX.PdsSortableItem & JSXBase.HTMLAttributes<HTMLPdsSortableItemElement>;
             "pds-switch": LocalJSX.PdsSwitch & JSXBase.HTMLAttributes<HTMLPdsSwitchElement>;
             "pds-tab": LocalJSX.PdsTab & JSXBase.HTMLAttributes<HTMLPdsTabElement>;
+            "pds-table": LocalJSX.PdsTable & JSXBase.HTMLAttributes<HTMLPdsTableElement>;
+            "pds-table-body": LocalJSX.PdsTableBody & JSXBase.HTMLAttributes<HTMLPdsTableBodyElement>;
+            "pds-table-cell": LocalJSX.PdsTableCell & JSXBase.HTMLAttributes<HTMLPdsTableCellElement>;
+            "pds-table-head": LocalJSX.PdsTableHead & JSXBase.HTMLAttributes<HTMLPdsTableHeadElement>;
+            "pds-table-head-cell": LocalJSX.PdsTableHeadCell & JSXBase.HTMLAttributes<HTMLPdsTableHeadCellElement>;
+            "pds-table-row": LocalJSX.PdsTableRow & JSXBase.HTMLAttributes<HTMLPdsTableRowElement>;
             "pds-tabpanel": LocalJSX.PdsTabpanel & JSXBase.HTMLAttributes<HTMLPdsTabpanelElement>;
             "pds-tabs": LocalJSX.PdsTabs & JSXBase.HTMLAttributes<HTMLPdsTabsElement>;
             "pds-textarea": LocalJSX.PdsTextarea & JSXBase.HTMLAttributes<HTMLPdsTextareaElement>;

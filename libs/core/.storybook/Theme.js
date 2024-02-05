@@ -29,6 +29,6 @@ export default create({
 
   brandTitle: 'Design System',
   brandUrl: '',
-  brandImage: '/images/sage-logo.png',
+  brandImage: '/images/brand-logo.png',
   brandTarget: '_self',
 });
