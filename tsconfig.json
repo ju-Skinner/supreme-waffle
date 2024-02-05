@@ -26,8 +26,11 @@
         "./libs/core"
       ],
       "@ju-skinner/supreme-waffle-react": [
-        "./react"
+        "./libs/react"
       ],
+      "@ju-skinner/supreme-waffle-doc-components": [
+        "./libs/doc-components"
+      ]
     },
     "target": "es2017",
   }

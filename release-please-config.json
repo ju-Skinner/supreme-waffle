@@ -6,6 +6,8 @@
   "packages": {
     "libs/core": {
     },
+    "libs/doc-components": {
+    },
     "libs/react": {
     }
   },
