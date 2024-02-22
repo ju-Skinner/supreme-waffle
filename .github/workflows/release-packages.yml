@@ -52,7 +52,7 @@ jobs:
           version: ${{ inputs.version }}
           working-directory: 'libs/core'
 
-      - name: Cache Built core
+      - name: Upload Core build
         uses: ./.github/workflows/actions/upload-archive
         with:
           name: supreme-waffle-core
@@ -91,9 +91,47 @@ jobs:
           version: ${{ inputs.version }}
           working-directory: 'libs/react'
 
-      - name: Cache Built react
+      - name: Upload React build
         uses: ./.github/workflows/actions/upload-archive
         with:
           name: supreme-waffle-react
           output: libs/react/ReactBuild.zip
           paths: libs/react/dist libs/react/css
+
+  release-doc-components:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: ${{ inputs.ref }}
+
+      - name: Restore core built cache
+        uses: ./.github/workflows/actions/download-archive
+        with:
+          name: supreme-waffle-doc-components
+          path: ./libs/doc-components
+          filename: DocComponentsBuild.zip
+
+      - name: Configure user
+        run: |
+          git config user.name "Automation Bot"
+          git config user.email "ju.skinner@gmail.com"
+
+      - name: Publish Doc Components
+        uses: ./.github/workflows/actions/publish-npm
+        with:
+          preid: ${{ inputs.preid }}
+          project: 'supreme-waffle-doc-components'
+          tag: ${{ inputs.tag }}
+          token: ${{ secrets.NPM_TOKEN }}
+          version: ${{ inputs.version }}
+          working-directory: 'libs/doc-components'
+
+      - name: Upload Doc Components
+        uses: ./.github/workflows/actions/upload-archive
+        with:
+          name: supreme-waffle-doc-components
+          output: libs/doc-components/doc-components-build.zip
+          paths: libs/doc-components/dist
