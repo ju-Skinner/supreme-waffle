@@ -56,7 +56,8 @@
   "dependencies": {
     "@ju-skinner/ideal-octo-sniffle": "3.0.1-alpha.1",
     "@stencil/core": "^4.8.1",
-    "sortablejs": "^1.15.0"
+    "sortablejs": "^1.15.0",
+    "tslib": "^2.6.2"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",
