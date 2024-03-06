@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1-alpha.9](https://github.com/ju-Skinner/supreme-waffle/compare/supreme-waffle-react-v0.1.0-alpha.9...supreme-waffle-react-v0.1.1-alpha.9) (2024-03-06)
+
+
+### Bug Fixes
+
+* **core-react:** Custom elements lazy loading ([d91f81f](https://github.com/ju-Skinner/supreme-waffle/commit/d91f81f3c0926fbc239c3d1507169917eb1037c3))
+
 ## [0.1.0-alpha.9](https://github.com/ju-Skinner/supreme-waffle/compare/supreme-waffle-react-v0.0.2-alpha.9...supreme-waffle-react-v0.1.0-alpha.9) (2024-01-22)
 
 
