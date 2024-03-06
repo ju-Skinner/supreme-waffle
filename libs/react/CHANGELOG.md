@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.2-alpha.9](https://github.com/ju-Skinner/supreme-waffle/compare/supreme-waffle-react-v0.1.1-alpha.9...supreme-waffle-react-v0.1.2-alpha.9) (2024-03-06)
+
+
+### Bug Fixes
+
+* **core-react:** Remove copy from build step ([110f5b9](https://github.com/ju-Skinner/supreme-waffle/commit/110f5b96e2900bbfcb94b055f1ebd3d1092f6749))
+
 ## [0.1.1-alpha.9](https://github.com/ju-Skinner/supreme-waffle/compare/supreme-waffle-react-v0.1.0-alpha.9...supreme-waffle-react-v0.1.1-alpha.9) (2024-03-06)
 
 
