@@ -2,7 +2,7 @@
   "name": "@ju-skinner/supreme-waffle-doc-components",
   "description": "Documentation components",
   "author": "",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
