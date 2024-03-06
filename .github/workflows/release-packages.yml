@@ -107,13 +107,6 @@ jobs:
           fetch-depth: 0
           ref: ${{ inputs.ref }}
 
-      - name: Restore core built cache
-        uses: ./.github/workflows/actions/download-archive
-        with:
-          name: supreme-waffle-doc-components
-          path: ./libs/doc-components
-          filename: DocComponentsBuild.zip
-
       - name: Configure user
         run: |
           git config user.name "Automation Bot"
