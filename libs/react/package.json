@@ -13,7 +13,6 @@
   "sideEffects": false,
   "main": "./dist/index.js",
   "module": "./dist/index.js",
-  "type": "module",
   "types": "./dist/index.d.ts",
   "publishConfig": {
     "access": "public",
@@ -35,7 +34,7 @@
     "css"
   ],
   "scripts": {
-    "build": "npm run clean && npm run copy && npm run compile",
+    "build": "npm run clean && npm run compile",
     "build.watch": "npm run compile -- --watch",
     "clean": "rm -rf dist",
     "compile": "rollup -c",
