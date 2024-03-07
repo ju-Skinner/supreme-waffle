@@ -31,7 +31,7 @@ The Canvas component is a wrapper, featuring a series of buttons to view the var
 
 ### docArgsTable
 ```javascript
-import { DocArgsTable } from '@ju-skinner/supreme-waffle-doc-components';
+import { DocArgsTable } from '@ju-skinner/sw-doc-components';
 import { components } from '../../../../dist/docs.json';
 
 <DocArgsTable componentName='pds-radio' docSource={components} />
@@ -43,7 +43,7 @@ import { components } from '../../../../dist/docs.json';
 ### docCanvas
 
 ```javascript
-import { DocCanvas } from '@ju-skinner/supreme-waffle-doc-components';
+import { DocCanvas } from '@ju-skinner/sw-doc-components';
 
 <DocCanvas mdxSource={{
   react: `<PdsRadio componentId="message1" label="Label" helperMessage="This is short message text." />`,

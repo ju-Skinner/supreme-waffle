@@ -1,6 +1,6 @@
 import { Component, h, Prop } from '@stencil/core';
 
-import { launch } from '@ju-skinner/ideal-octo-sniffle/icons';
+import { launch } from '@ju-skinner/ideal-icons/icons';
 
 /**
  * @slot - Content is placed between the opening closing tags

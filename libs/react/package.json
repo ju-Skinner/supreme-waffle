@@ -1,6 +1,6 @@
 {
-  "name": "@ju-skinner/supreme-waffle-react",
-  "version": "0.1.2-alpha.9",
+  "name": "@ju-skinner/sw-react",
+  "version": "0.2.6",
   "license": "MIT",
   "description": "Web Components React Wrapper",
   "author": "",
@@ -42,8 +42,8 @@
     "tsc": "tsc -p . --outdir ./dist"
   },
   "dependencies": {
-    "@ju-skinner/ideal-octo-sniffle": "3.1.1",
-    "@ju-skinner/supreme-waffle-core": "*",
+    "@ju-skinner/ideal-icons": "3.1.4",
+    "@ju-skinner/sw-core": "*",
     "tslib": "*"
   },
   "devDependencies": {

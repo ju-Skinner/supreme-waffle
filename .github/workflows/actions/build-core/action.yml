@@ -46,7 +46,7 @@ runs:
       shell: bash
 
     - name: Build Core
-      run: npx nx run supreme-waffle-core:build
+      run: npx nx run sw-core:build
       shell: bash
 
     - name: Upload artifacts

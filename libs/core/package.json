@@ -1,6 +1,6 @@
 {
-  "name": "@ju-skinner/supreme-waffle-core",
-  "version": "0.2.0-alpha.9",
+  "name": "@ju-skinner/sw-core",
+  "version": "0.2.6",
   "license": "MIT",
   "description": "Base components for Design System",
   "author": "",
@@ -54,7 +54,7 @@
     "test.watch": "stencil test --spec --e2e --watchAll --coverage"
   },
   "dependencies": {
-    "@ju-skinner/ideal-octo-sniffle": "3.1.1",
+    "@ju-skinner/ideal-icons": "3.1.4",
     "@stencil/core": "^4.8.1",
     "sortablejs": "^1.15.0",
     "tslib": "^2.6.2"
@@ -62,7 +62,7 @@
   "devDependencies": {
     "@babel/core": "^7.19.3",
     "@babel/preset-env": "^7.22.10",
-    "@ju-skinner/supreme-waffle-doc-components": "^0.0.2",
+    "@ju-skinner/sw-doc-components": "^0.3.0",
     "@pxtrn/storybook-addon-docs-stencil": "^6.4.1",
     "@stencil-community/eslint-plugin": "^0.5.0",
     "@stencil/react-output-target": "^0.5.3",

@@ -5,7 +5,7 @@ import { reactOutputTarget } from '@stencil/react-output-target';
 import { sass } from '@stencil/sass';
 
 export const config: Config = {
-  namespace: 'supreme-waffle-core',
+  namespace: 'sw-core',
   globalStyle: 'src/global/styles/app.scss',
   devServer: {
     openBrowser: false,
@@ -39,7 +39,7 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
     reactOutputTarget({
-      componentCorePackage: '@ju-skinner/supreme-waffle-core',
+      componentCorePackage: '@ju-skinner/sw-core',
       includeImportCustomElements: true,
       includePolyfills: false,
       includeDefineCustomElements: false,
@@ -51,5 +51,5 @@ export const config: Config = {
   ],
   buildEs5: 'prod',
   plugins: [sass()],
-  taskQueue: 'async',
+  taskQueue: 'async'
 };

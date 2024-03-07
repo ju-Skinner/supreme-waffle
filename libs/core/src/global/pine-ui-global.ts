@@ -1,1 +1,1 @@
-import '@ju-skinner/ideal-octo-sniffle';
+import '@ju-skinner/ideal-icons';

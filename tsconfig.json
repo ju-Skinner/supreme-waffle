@@ -22,13 +22,13 @@
     "strict": true,
     "strictPropertyInitialization": false,
     "paths": {
-      "@ju-skinner/supreme-waffle-core": [
+      "@ju-skinner/sw-core": [
         "./libs/core"
       ],
-      "@ju-skinner/supreme-waffle-react": [
+      "@ju-skinner/sw-react": [
         "./libs/react"
       ],
-      "@ju-skinner/supreme-waffle-doc-components": [
+      "@ju-skinner/sw-doc-components": [
         "./libs/doc-components"
       ]
     },

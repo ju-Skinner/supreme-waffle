@@ -1,4 +1,4 @@
-import type { Components as PdsIconsComponents, JSX as PdsIconsJSX } from '@ju-skinner/ideal-octo-sniffle';
+import type { Components as PdsIconsComponents, JSX as PdsIconsJSX } from '@ju-skinner/ideal-icons';
 
 export * from './components';
 export * from './index';

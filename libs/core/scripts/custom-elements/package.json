@@ -1,5 +1,5 @@
 {
-  "name": "@ju-skinner/supreme-waffle-core/components",
+  "name": "@ju-skinner/sw-core/components",
   "version": "0.0.0",
   "description": "Base Components exported as custom elements, extending HTMLElement.",
   "main": "./index.js",

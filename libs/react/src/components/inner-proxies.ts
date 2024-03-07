@@ -1,8 +1,8 @@
-import type { JSX as PdsIconsJSX } from '@ju-skinner/ideal-octo-sniffle';
+import type { JSX as PdsIconsJSX } from '@ju-skinner/ideal-icons';
 
 import { createReactComponent } from './react-component-lib';
 
-import { defineCustomElement as definePdsIcon } from '@ju-skinner/ideal-octo-sniffle/components/pds-icon'
+import { defineCustomElement as definePdsIcon } from '@ju-skinner/ideal-icons/components/pds-icon'
 
 // pineicons
 export const PdsIconInner = /*@__PURE__*/ createReactComponent<PdsIconsJSX.PdsIcon, HTMLPdsIconElement>(

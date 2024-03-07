@@ -46,7 +46,7 @@ jobs:
         uses: ./.github/workflows/actions/publish-npm
         with:
           preid: ${{ inputs.preid }}
-          project: 'supreme-waffle-core'
+          project: 'sw-core'
           tag: ${{ inputs.tag }}
           token: ${{ secrets.NPM_TOKEN }}
           version: ${{ inputs.version }}
@@ -55,7 +55,7 @@ jobs:
       - name: Upload Core build
         uses: ./.github/workflows/actions/upload-archive
         with:
-          name: supreme-waffle-core
+          name: sw-core
           output: libs/core/CoreBuild.zip
           paths: libs/core/dist libs/core/components libs/core/css libs/core/hydrate libs/core/loader libs/core/src/components.d.ts
 
@@ -72,7 +72,7 @@ jobs:
       - name: Restore core built cache
         uses: ./.github/workflows/actions/download-archive
         with:
-          name: supreme-waffle-core
+          name: sw-core
           path: ./libs/core
           filename: CoreBuild.zip
 
@@ -85,7 +85,7 @@ jobs:
         uses: ./.github/workflows/actions/publish-npm
         with:
           preid: ${{ inputs.preid }}
-          project: 'supreme-waffle-react'
+          project: 'sw-react'
           tag: ${{ inputs.tag }}
           token: ${{ secrets.NPM_TOKEN }}
           version: ${{ inputs.version }}
@@ -94,7 +94,7 @@ jobs:
       - name: Upload React build
         uses: ./.github/workflows/actions/upload-archive
         with:
-          name: supreme-waffle-react
+          name: sw-react
           output: libs/react/ReactBuild.zip
           paths: libs/react/dist libs/react/css
 
@@ -116,7 +116,7 @@ jobs:
         uses: ./.github/workflows/actions/publish-npm
         with:
           preid: ${{ inputs.preid }}
-          project: 'supreme-waffle-doc-components'
+          project: 'sw-doc-components'
           tag: ${{ inputs.tag }}
           token: ${{ secrets.NPM_TOKEN }}
           version: ${{ inputs.version }}
@@ -125,6 +125,6 @@ jobs:
       - name: Upload Doc Components
         uses: ./.github/workflows/actions/upload-archive
         with:
-          name: supreme-waffle-doc-components
+          name: sw-doc-components
           output: libs/doc-components/doc-components-build.zip
           paths: libs/doc-components/dist

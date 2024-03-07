@@ -1,7 +1,7 @@
 import { extractArgTypes, extractComponentDescription, setStencilDocJson } from '@pxtrn/storybook-addon-docs-stencil';
 
 import docsJson from '../dist/docs.json';
-import iconDocsJson from '@ju-skinner/ideal-octo-sniffle/dist/docs.json';
+import iconDocsJson from '@ju-skinner/ideal-icons/dist/docs.json';
 /*
 *
 * Merge the Icon docs.json with core docs.json file

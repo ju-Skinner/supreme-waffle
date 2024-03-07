@@ -1,2 +1,2 @@
 export * from './components';
-export { defineCustomElements } from '@ju-skinner/supreme-waffle-core/loader';
+export { defineCustomElements } from '@ju-skinner/sw-core/loader';

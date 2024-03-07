@@ -23,7 +23,7 @@ class PdsIconContainer extends React.PureComponent<InternalProps> {
     super(props);
     if (this.props.name) {
       console.warn(
-        'In Core React, you import icons from "@ju-skinner/ideal-octo-sniffle/icons" and set the icon you imported to the "icon" property. Setting the "name" property has no effect.'
+        'In Core React, you import icons from "@ju-skinner/ideal-icons/icons" and set the icon you imported to the "icon" property. Setting the "name" property has no effect.'
       );
     }
   }
