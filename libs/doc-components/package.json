@@ -13,10 +13,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ju-skinner/supreme-waffle.git"
+    "url": "git+https://github.com/ju-Skinner/supreme-waffle.git"
   },
   "bugs": {
-    "url": "https://github.com/ju-skinner/supreme-waffle/issues"
+    "url": "https://github.com/ju-Skinner/supreme-waffle/issues"
   },
   "files": [
     "dist"
