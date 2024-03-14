@@ -1,6 +1,6 @@
 {
   "name": "@ju-skinner/sw-core",
-  "version": "0.2.6",
+  "version": "0.3.5",
   "license": "MIT",
   "description": "Base components for Design System",
   "author": "",
@@ -11,13 +11,13 @@
     "design system"
   ],
   "main": "dist/index.cjs.js",
-  "module": "dist/index.js",
+  "module": "components/index.js",
   "es2015": "dist/esm/index.mjs",
   "es2017": "dist/esm/index.mjs",
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/core/core.esm.js",
+  "unpkg": "dist/sw-core/sw-core.esm.js",
   "publishConfig": {
     "access": "public",
     "directory": "dist"
@@ -32,6 +32,7 @@
   "files": [
     "components/",
     "dist/",
+    "hydrate",
     "loader/"
   ],
   "scripts": {
@@ -54,7 +55,7 @@
     "test.watch": "stencil test --spec --e2e --watchAll --coverage"
   },
   "dependencies": {
-    "@ju-skinner/ideal-icons": "3.1.4",
+    "@ju-skinner/ideal-icons": "3.1.6",
     "@stencil/core": "^4.8.1",
     "sortablejs": "^1.15.0",
     "tslib": "^2.6.2"

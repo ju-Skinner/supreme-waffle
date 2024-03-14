@@ -2,9 +2,10 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "allowUnreachableCode": false,
-    "declaration": false,
+    "declaration": true,
     "experimentalDecorators": true,
-    "lib": ["dom", "es2015", "es2017"],
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["DOM", "DOM.Iterable", "ES2017", "ES2020", "ES2021"],
     "jsx": "react",
     "jsxFactory": "h",
     "moduleResolution": "node",
