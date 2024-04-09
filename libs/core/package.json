@@ -55,7 +55,7 @@
     "test.watch": "stencil test --spec --e2e --watchAll --coverage"
   },
   "dependencies": {
-    "@ju-skinner/ideal-icons": "3.1.6",
+    "@ju-skinner/ideal-icons": "*",
     "@stencil/core": "^4.8.1",
     "sortablejs": "^1.15.0",
     "tslib": "^2.6.2"
