@@ -1,6 +1,6 @@
 {
   "name": "@ju-skinner/sw-react",
-  "version": "0.3.5",
+  "version": "0.4.0",
   "license": "MIT",
   "description": "Web Components React Wrapper",
   "author": "",
@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "@ju-skinner/ideal-icons": "*",
-    "@ju-skinner/sw-core": "0.3.5",
+    "@ju-skinner/sw-core": "*",
     "tslib": "*"
   },
   "devDependencies": {
