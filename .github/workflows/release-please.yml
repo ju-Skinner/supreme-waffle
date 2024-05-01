@@ -50,10 +50,10 @@ jobs:
       - name: Output
         if: ${{ contains(fromJSON(needs.release-please.outputs.paths_released), 'libs/core')}}
         run: |
-          echo "major: ${{ needs.release-please.outputs.libs-core--major }}"
-          echo "minor: ${{ needs.release-please.outputs.libs-core--minor }}"
-          echo "patch: ${{ needs.release-please.outputs.libs-core--patch }}"
-          echo "sha: ${{ needs.release-please.outputs.libs-core--sha }}"
+          echo "major: ${{ needs.release-please.outputs['libs-core--major'] }}"
+          echo "minor: ${{ needs.release-please.outputs['libs-core--minor'] }}"
+          echo "patch: ${{ needs.release-please.outputs['libs-core--patch'] }}"
+          echo "sha: ${{ needs.release-please.outputs['libs-core--sha'] }}"
 
     # uses: ./.github/workflows/release-packages.yml
     # with:
