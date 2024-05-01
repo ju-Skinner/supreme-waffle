@@ -4,13 +4,13 @@
 
 div {
   // These custom props are not reachable
-  --background-color: var(--supreme-waffle-color-primary-100);
+  --color-background-default: var(--supreme-waffle-color-primary-100);
   --badge-background-color: var(--supreme-waffle-color-base-white);
   --border: var(--supreme-waffle-border-default);
   --radius-round: 50%;
 
   align-items: center;
-  background-color: var(--background-color);
+  background-color: var(--color-background-default);
   border-radius: var(--admin-radius-round, var(--radius-round));
   display: inline-flex;
   justify-content: center;
