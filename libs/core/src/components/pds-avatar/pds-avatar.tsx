@@ -41,6 +41,7 @@ export class PdsAvatar {
    * @defaultValue lg
    */
   @Prop({ reflect: true }) size?:
+  | 'xxl' // 75px
   | 'xl' // 64px
   | 'lg' // 56px
   | 'md' // 40px
