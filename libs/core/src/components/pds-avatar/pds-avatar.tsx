@@ -8,7 +8,7 @@ import { Component, Host, h, Prop } from '@stencil/core';
 export class PdsAvatar {
 
   /**
-   * The alt for a custom user image.
+   * The alt for a custom user image. Foo
    * @defaultValue null
    */
   @Prop() alt?: string | null = null;
