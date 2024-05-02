@@ -23,6 +23,22 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
+## [0.6.0-rc.0](https://github.com/ju-Skinner/supreme-waffle/compare/sw-react-v0.5.0-rc.0...sw-react-v0.6.0-rc.0) (2024-05-02)
+
+
+### Features
+
+* **react:** Add PdsIcon helper ([615940f](https://github.com/ju-Skinner/supreme-waffle/commit/615940f1817d7aa68e6124eae076958c22fe90aa))
+
+
+### Bug Fixes
+
+* Change icon dependency to * to get latest upon update ([1ab2931](https://github.com/ju-Skinner/supreme-waffle/commit/1ab2931e09c3cafb4168c2d2cf34b7cfe3a645fc))
+* **core-react:** Custom elements lazy loading ([d91f81f](https://github.com/ju-Skinner/supreme-waffle/commit/d91f81f3c0926fbc239c3d1507169917eb1037c3))
+* **core-react:** Remove copy from build step ([110f5b9](https://github.com/ju-Skinner/supreme-waffle/commit/110f5b96e2900bbfcb94b055f1ebd3d1092f6749))
+* **react:** Add missing exports ([cea33b9](https://github.com/ju-Skinner/supreme-waffle/commit/cea33b9b360993cafbc8be7cb547e3b2a3338336))
+* Versions ([6307167](https://github.com/ju-Skinner/supreme-waffle/commit/630716711abf92fcd82bedf94445742512799f57))
+
 ## [0.1.2-alpha.9](https://github.com/ju-Skinner/supreme-waffle/compare/supreme-waffle-react-v0.1.1-alpha.9...supreme-waffle-react-v0.1.2-alpha.9) (2024-03-06)
 
 
