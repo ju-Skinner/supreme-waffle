@@ -72,6 +72,9 @@ jobs:
           value: ${{ matrix.path}}
           index_of_str: "libs/"
 
+      - name: Build Packages
+        run: npm install --legacy-peer-deps
+
       - uses: ./.github/workflows/actions/publish-npm
         with:
           tag: 'latest'
