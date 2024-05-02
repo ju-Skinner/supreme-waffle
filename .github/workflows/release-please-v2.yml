@@ -16,7 +16,12 @@ jobs:
     outputs:
       paths_released: ${{ steps.manifest-release.outputs.paths_released }}
       releases_created: ${{ steps.manifest-release.outputs.releases_created }}
-    permissions: write-all
+
+    permissions:
+      contents: write
+      id-token: write
+      pull-requests: write
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -42,19 +47,19 @@ jobs:
           echo "sha: ${{ steps.manifest-release.outputs.sha }}"
           echo "RELEASES_created: ${{ steps.manifest-release.outputs.releases_created }}"
 
-  release-packages:
-    permissions: write-all
-    needs: release-please
-    if: ${{ needs.release-please.outputs.releases_created == 'true' }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Output
-        if: ${{ contains(fromJSON(needs.release-please.outputs.paths_released), 'libs/core')}}
-        run: |
-          echo "major: ${{ needs.release-please.outputs['libs-core--major'] }}"
-          echo "minor: ${{ needs.release-please.outputs['libs-core--minor'] }}"
-          echo "patch: ${{ needs.release-please.outputs['libs-core--patch'] }}"
-          echo "sha: ${{ needs.release-please.outputs['libs-core--sha'] }}"
+  # release-packages:
+  #   permissions: write-all
+  #   needs: release-please
+  #   if: ${{ needs.release-please.outputs.releases_created == 'true' }}
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Output
+  #       if: ${{ contains(fromJSON(needs.release-please.outputs.paths_released), 'libs/core')}}
+  #       run: |
+  #         echo "major: ${{ needs.release-please.outputs['libs-core--major'] }}"
+  #         echo "minor: ${{ needs.release-please.outputs['libs-core--minor'] }}"
+  #         echo "patch: ${{ needs.release-please.outputs['libs-core--patch'] }}"
+  #         echo "sha: ${{ needs.release-please.outputs['libs-core--sha'] }}"
 
     # uses: ./.github/workflows/release-packages.yml
     # with:
