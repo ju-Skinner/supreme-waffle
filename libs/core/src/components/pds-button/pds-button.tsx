@@ -44,7 +44,7 @@ export class PdsButton {
   /**
    * Sets button variant styles as outlined in Figma documentation
    */
-  @Prop() variant: 'primary' | 'secondary' | 'accent' | 'disclosure' | 'destructive' | 'unstyled' = 'primary';
+  @Prop() variant: 'primary' | 'secondary' | 'accent' | 'disclosure' | 'destructive' | 'unstyled'| 'icon' = 'primary';
 
   private handleClick = (ev: Event) => {
     if (this.type != 'button') {
