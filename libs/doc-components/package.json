@@ -2,7 +2,7 @@
   "name": "@ju-skinner/sw-doc-components",
   "description": "Documentation components",
   "author": "",
-  "version": "0.5.0-rc.0",
+  "version": "0.6.0-rc.0",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",

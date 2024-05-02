@@ -22,6 +22,21 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
+## [0.6.0-rc.0](https://github.com/ju-Skinner/supreme-waffle/compare/sw-core-v0.5.0-rc.0...sw-core-v0.6.0-rc.0) (2024-05-02)
+
+
+### Features
+
+* **react:** Add PdsIcon helper ([615940f](https://github.com/ju-Skinner/supreme-waffle/commit/615940f1817d7aa68e6124eae076958c22fe90aa))
+
+
+### Bug Fixes
+
+* Change icon dependency to * to get latest upon update ([1ab2931](https://github.com/ju-Skinner/supreme-waffle/commit/1ab2931e09c3cafb4168c2d2cf34b7cfe3a645fc))
+* **core:** Out of sync package version ([3cafb50](https://github.com/ju-Skinner/supreme-waffle/commit/3cafb503caeae5bcf9176300af053c8da6070299))
+* **pds-link:** Icons should be imported and set via icon property ([8650929](https://github.com/ju-Skinner/supreme-waffle/commit/8650929ecf6561df0b182d451d066f7b126be9a1))
+* Versions ([6307167](https://github.com/ju-Skinner/supreme-waffle/commit/630716711abf92fcd82bedf94445742512799f57))
+
 ## [0.2.0-alpha.9](https://github.com/ju-Skinner/supreme-waffle/compare/supreme-waffle-core-v0.1.1-alpha.9...supreme-waffle-core-v0.2.0-alpha.9) (2024-03-06)
 
 
