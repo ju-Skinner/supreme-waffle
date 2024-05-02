@@ -5,6 +5,7 @@ import { Component, Host, h, Prop } from '@stencil/core';
   styleUrl: 'pds-avatar.scss',
   shadow: true,
 })
+
 export class PdsAvatar {
 
   /**
