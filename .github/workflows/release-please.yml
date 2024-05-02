@@ -1,63 +1,63 @@
-name: release-please
+# name: release-please
 
-on:
-  push:
-    branches:
-      - main
+# on:
+#   # push:
+#   #   branches:
+#   #     - main
 
-permissions:
-  contents: write
-  pull-requests: write
+# permissions:
+#   contents: write
+#   pull-requests: write
 
-jobs:
-  release-please:
-    runs-on: ubuntu-latest
-    outputs:
-      paths_released: ${{ steps.manifest-release.outputs.paths_released }}
-      releases_created: ${{ steps.manifest-release.outputs.releases_created }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          ref: ''
+# jobs:
+#   release-please:
+#     runs-on: ubuntu-latest
+#     outputs:
+#       paths_released: ${{ steps.manifest-release.outputs.paths_released }}
+#       releases_created: ${{ steps.manifest-release.outputs.releases_created }}
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v3
+#         with:
+#           fetch-depth: 0
+#           ref: ''
 
-      - uses: google-github-actions/release-please-action@v4
-        id: manifest-release
-        with:
-          manifest-file: .release-please-manifest.json
+#       - uses: google-github-actions/release-please-action@v4
+#         id: manifest-release
+#         with:
+#           manifest-file: .release-please-manifest.json
 
-      - name: Show output from Release-Please
-        run: |
-          echo "release_created: ${{ steps.manifest-release.outputs.release_created }}"
-          echo "paths_released: ${{ steps.manifest-release.outputs.paths_released }}"
-          echo "upload_url: ${{ steps.manifest-release.outputs.upload_url }}"
-          echo "html_url: ${{ steps.manifest-release.outputs.html_url }}"
-          echo "tag_name: ${{ steps.manifest-release.outputs.tag_name }}"
-          echo "major: ${{ steps.manifest-release.outputs.major }}"
-          echo "minor: ${{ steps.manifest-release.outputs.minor }}"
-          echo "patch: ${{ steps.manifest-release.outputs.patch }}"
-          echo "sha: ${{ steps.manifest-release.outputs.sha }}"
-          echo "RELEASES_created: ${{ steps.manifest-release.outputs.releases_created }}"
+#       - name: Show output from Release-Please
+#         run: |
+#           echo "release_created: ${{ steps.manifest-release.outputs.release_created }}"
+#           echo "paths_released: ${{ steps.manifest-release.outputs.paths_released }}"
+#           echo "upload_url: ${{ steps.manifest-release.outputs.upload_url }}"
+#           echo "html_url: ${{ steps.manifest-release.outputs.html_url }}"
+#           echo "tag_name: ${{ steps.manifest-release.outputs.tag_name }}"
+#           echo "major: ${{ steps.manifest-release.outputs.major }}"
+#           echo "minor: ${{ steps.manifest-release.outputs.minor }}"
+#           echo "patch: ${{ steps.manifest-release.outputs.patch }}"
+#           echo "sha: ${{ steps.manifest-release.outputs.sha }}"
+#           echo "RELEASES_created: ${{ steps.manifest-release.outputs.releases_created }}"
 
-  release-packages:
-    needs: release-please
-    if: ${{ needs.release-please.outputs.releases_created == 'true' }}
-    permissions:
-      id-token: write
-    runs-on: ubuntu-latest
-    steps:
-      - name: Output
-        if: ${{ contains(fromJSON(needs.release-please.outputs.paths_released), 'libs/core')}}
-        run: |
-          echo "major: ${{ needs.release-please.outputs.libs-core--major }}"
-          echo "minor: ${{ needs.release-please.outputs.libs-core--minor }}"
-          echo "patch: ${{ needs.release-please.outputs.libs-core--patch }}"
-          echo "sha: ${{ needs.release-please.outputs.libs-core--sha }}"
+#   release-packages:
+#     needs: release-please
+#     if: ${{ needs.release-please.outputs.releases_created == 'true' }}
+#     permissions:
+#       id-token: write
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Output
+#         if: ${{ contains(fromJSON(needs.release-please.outputs.paths_released), 'libs/core')}}
+#         run: |
+#           echo "major: ${{ needs.release-please.outputs.libs-core--major }}"
+#           echo "minor: ${{ needs.release-please.outputs.libs-core--minor }}"
+#           echo "patch: ${{ needs.release-please.outputs.libs-core--patch }}"
+#           echo "sha: ${{ needs.release-please.outputs.libs-core--sha }}"
 
-    # uses: ./.github/workflows/release-packages.yml
-    # with:
-    #   tag: 'latest'
-    #   version: ''
-    # secrets: inherit
+#     # uses: ./.github/workflows/release-packages.yml
+#     # with:
+#     #   tag: 'latest'
+#     #   version: ''
+#     # secrets: inherit
 
