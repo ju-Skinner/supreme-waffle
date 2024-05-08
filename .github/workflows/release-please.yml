@@ -73,3 +73,13 @@ jobs:
           token: ${{ secrets.NPM_TOKEN }}
           working-directory: ${{ matrix.path }}
           project: "sw-${{ steps.project-name.outputs.substring }}"
+
+      - name: Slack Notification
+        if: matrix.path == 'libs/core'
+        uses: slackapi/slack-github-action@v1.26.0
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          VERSION: ${{needs.release-please.outputs['libs-core--version']}}
+        with:
+          channel-id: 'julian.skinner'
+          payload-file-path: "./github/workflows/slack-release-info-payload.json"
