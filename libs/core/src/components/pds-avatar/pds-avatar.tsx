@@ -46,7 +46,6 @@ export class PdsAvatar {
   | 'md' // 40px
   | 'sm' // 32px
   | 'xs' // 24px
-  | 'xxs' // 16px
   | string = 'lg';
 
   /**
