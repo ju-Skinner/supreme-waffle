@@ -8,8 +8,9 @@ on:
         required: true
 
       channel:
+        default: 'julian-workflow-test'
         description: 'The channel to send a message to.'
-        required: true
+
 
 jobs:
   send-notification:
@@ -20,11 +21,16 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Current Date
+        run: |
+          echo "CURRENT_DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
       - name: Slack Notification
         uses: slackapi/slack-github-action@v1.26.0
         env:
+          DATE: ${{ env.CURRENT_DATE }}
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-          VERSION: ${{inputs.version}}
+          VERSION: ${{ inputs.version }}
         with:
           channel-id: ${{ inputs.channel }}
           payload-file-path: "./.github/workflows/slack-release-info-payload.json"

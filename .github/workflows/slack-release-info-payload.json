@@ -1,4 +1,5 @@
 {
+  "text": "Pine Release ${{ env.VERSION }}",
 	"blocks": [
 		{
 			"type": "header",
@@ -11,7 +12,7 @@
 			"type": "context",
 			"elements": [
 				{
-					"text": "*[DATE]*  |  Design System Services",
+					"text": "*${{ env.DATE }}*  |  Design System Services",
 					"type": "mrkdwn"
 				}
 			]
@@ -30,7 +31,7 @@
 			"type": "section",
 			"text": {
 				"type": "mrkdwn",
-				"text": "* Detail 1",
+				"text": "* Pull Request: ${{ env.PULL_REQUEST }}",
 				"verbatim": false
 			}
 		},
