@@ -22,6 +22,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
+## [0.6.1](https://github.com/ju-Skinner/supreme-waffle/compare/sw-core-v0.6.0...sw-core-v0.6.1) (2024-05-08)
+
+
+### Bug Fixes 🐛
+
+* **avatar:** Remove xxs size ([#92](https://github.com/ju-Skinner/supreme-waffle/issues/92)) ([baeaaa0](https://github.com/ju-Skinner/supreme-waffle/commit/baeaaa068aff68971eec03dab3a926adde06696a))
+
 ## [0.6.0](https://github.com/ju-Skinner/supreme-waffle/compare/sw-core-v0.5.1...sw-core-v0.6.0) (2024-05-08)
 
 
