@@ -1,0 +1,30 @@
+name: 'Send Slack Notification'
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'The SemVer that is being published.'
+        required: true
+
+      channel:
+        description: 'The channel to send a message to.'
+        required: true
+
+jobs:
+  send-notification:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Slack Notification
+        uses: slackapi/slack-github-action@v1.26.0
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          VERSION: ${{inputs.version}}
+        with:
+          channel-id: ${{ inputs.channel }}
+          payload-file-path: "./.github/workflows/slack-release-info-payload.json"
