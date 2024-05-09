@@ -4,8 +4,8 @@
 		{
 			"type": "header",
 			"text": {
-				"type": "plain_text",
-				"text": ":pine:  Pine Release v${{ env.VERSION }} :pine:"
+				"type": "mrkdwn",
+				"text": ":pine:  Pine Release *v${{ env.VERSION }}* :pine:"
 			}
 		},
 		{
@@ -31,22 +31,8 @@
 			"type": "section",
 			"text": {
 				"type": "mrkdwn",
-				"text": "* Pull Request: ${{ env.PULL_REQUEST }}",
+				"text": "* Release: ${{ env.RELEASE }}",
 				"verbatim": false
-			}
-		},
-		{
-			"type": "section",
-			"text": {
-				"type": "mrkdwn",
-				"text": "* Notes: ${{ env.NOTES }}"
-			}
-		},
-		{
-			"type": "section",
-			"text": {
-				"type": "mrkdwn",
-				"text": "* Detail 3"
 			}
 		}
 	]
