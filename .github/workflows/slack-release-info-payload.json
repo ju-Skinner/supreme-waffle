@@ -39,7 +39,7 @@
 			"type": "section",
 			"text": {
 				"type": "mrkdwn",
-				"text": "* Detail 2"
+				"text": "* Notes: ${{ env.NOTES }}"
 			}
 		},
 		{

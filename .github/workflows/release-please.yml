@@ -74,12 +74,19 @@ jobs:
           working-directory: ${{ matrix.path }}
           project: "sw-${{ steps.project-name.outputs.substring }}"
 
-      - name: Slack Notification
+      - name: Current Date
+        run: |
+          echo "CURRENT_DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+      - name: Core Slack Notification
         if: matrix.path == 'libs/core'
         uses: slackapi/slack-github-action@v1.26.0
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-          VERSION: ${{needs.release-please.outputs['libs-core--version']}}
+          DATE: ${{ env.CURRENT_DATE }}
+          PULL_REQUEST: "${{ vars.commit_url }}/${{ needs.release-please.outputs['libs-core--sha'] }}"
+          VERSION: ${{ needs.release-please.outputs['libs-core--tag_name'] }}
+          NOTES: ${{ needs.release-please.outputs['libs-core--notes'] }}
         with:
-          channel-id: 'julian.skinner'
-          payload-file-path: "./github/workflows/slack-release-info-payload.json"
+          channel-id: 'julian-workflow-test'
+          payload-file-path: "./.github/workflows/slack-release-info-payload.json"
