@@ -64,15 +64,15 @@ jobs:
           value: ${{ matrix.path}}
           index_of_str: "libs/"
 
-      - name: Build Packages
-        run: npm install --legacy-peer-deps
+      # - name: Build Packages
+      #   run: npm install --legacy-peer-deps
 
-      - uses: ./.github/workflows/actions/publish-npm
-        with:
-          tag: 'latest'
-          token: ${{ secrets.NPM_TOKEN }}
-          working-directory: ${{ matrix.path }}
-          project: "sw-${{ steps.project-name.outputs.substring }}"
+      # - uses: ./.github/workflows/actions/publish-npm
+      #   with:
+      #     tag: 'latest'
+      #     token: ${{ secrets.NPM_TOKEN }}
+      #     working-directory: ${{ matrix.path }}
+      #     project: "sw-${{ steps.project-name.outputs.substring }}"
 
       - name: Current Date
         run: |
