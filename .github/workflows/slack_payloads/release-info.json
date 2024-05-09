@@ -1,6 +1,5 @@
 {
-  "text": "Pine Release ${{ env.VERSION }}",
-	"blocks": [
+  "blocks": [
 		{
 			"type": "header",
 			"text": {
@@ -24,29 +23,14 @@
 			"type": "section",
 			"text": {
 				"type": "mrkdwn",
-				"text": "*Release Information*"
+				"text": ":information_source: *Release Information*"
 			}
 		},
 		{
 			"type": "section",
 			"text": {
 				"type": "mrkdwn",
-				"text": "* Pull Request: ${{ env.PULL_REQUEST }}",
-				"verbatim": false
-			}
-		},
-		{
-			"type": "section",
-			"text": {
-				"type": "mrkdwn",
-				"text": "* Notes: ${{ env.NOTES }}"
-			}
-		},
-		{
-			"type": "section",
-			"text": {
-				"type": "mrkdwn",
-				"text": "* Detail 3"
+				"text": "The details for version *${{ env.VERSION }}* can be found at the link provided below. \n\n ${{ env.RELEASE_URL }}"
 			}
 		}
 	]
