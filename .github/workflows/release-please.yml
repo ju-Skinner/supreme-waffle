@@ -22,6 +22,10 @@ jobs:
       id-token: write
       pull-requests: write
 
+    strategy:
+      matrix:
+        path: ['libs/core', 'libs/react', 'libs/doc-components']
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -39,19 +43,16 @@ jobs:
           echo "RELEASES_created: ${{ steps.manifest-release.outputs.releases_created }}"
           echo "paths_released: ${{ steps.manifest-release.outputs.paths_released }}"
 
-  release-packages:
-    runs-on: ubuntu-latest
-    needs: release-please
-    if: ${{ needs.release-please.outputs.releases_created == 'true' }}
-    strategy:
-      matrix:
-        path: ${{ fromJSON(needs.release-please.outputs.paths_released) }}
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+      - name: Release Please outputs
+        run: |
+          echo "release_created: ${{ steps.manifest-release.outputs[format('{0}--release_created', matrix.path)] }}"
+          echo "upload_url: ${{ steps.manifest-release.outputs[format('{0}--upload-url', matrix.path)] }}"
+          echo "html_url: ${{ steps.manifest-release.outputs[format('{0}--html_url', matrix.path)] }}"
+          echo "tag_name: ${{ steps.manifest-release.outputs[format('{0}--tag_name', matrix.path)] }}"
+          echo "major: ${{ steps.manifest-release.outputs[format('{0}--major', matrix.path)] }}"
+          echo "minor: ${{ steps.manifest-release.outputs[format('{0}--minor', matrix.path)] }}"
+          echo "patch: ${{ steps.manifest-release.outputs[format('{0}--patch', matrix.path)] }}"
+          echo "sha: ${{ steps.manifest-release.outputs[format('{0}--sha', matrix.path)] }}"
 
       - name: Configure user
         run: |
@@ -64,30 +65,19 @@ jobs:
           value: ${{ matrix.path}}
           index_of_str: "libs/"
 
-      - name: Build Packages
-        run: npm install --legacy-peer-deps
+      # - name: Build Packages
+      #   run: npm install --legacy-peer-deps
 
-      - uses: ./.github/workflows/actions/publish-npm
-        with:
-          tag: 'latest'
-          token: ${{ secrets.NPM_TOKEN }}
-          working-directory: ${{ matrix.path }}
-          project: "sw-${{ steps.project-name.outputs.substring }}"
+      # - uses: ./.github/workflows/actions/publish-npm
+      #   with:
+      #     tag: 'latest'
+      #     token: ${{ secrets.NPM_TOKEN }}
+      #     working-directory: ${{ matrix.path }}
+      #     project: "sw-${{ steps.project-name.outputs.substring }}"
 
       - name: Current Date
         run: |
           echo "CURRENT_DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
-
-      - name: Release Please outputs
-        run: |
-          echo "release_created: ${{ needs.release-please.outputs['libs/core--release_created'] }}"
-          echo "upload_url: ${{ needs.release-please.outputs['libs/core--upload-url'] }}"
-          echo "html_url: ${{ needs.release-please.outputs['libs/core--html_url'] }}"
-          echo "tag_name: ${{ needs.release-please.outputs['libs/core--tag_name'] }}"
-          echo "major: ${{ needs.release-please.outputs['libs/core--major'] }}"
-          echo "minor: ${{ needs.release-please.outputs['libs/core--minor'] }}"
-          echo "patch: ${{ needs.release-please.outputs['libs/core--patch'] }}"
-          echo "sha: ${{ needs.release-please.outputs['libs/core--sha'] }}"
 
       - name: Core Slack Notification
         if: matrix.path == 'libs/core'
@@ -95,9 +85,9 @@ jobs:
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
           DATE: ${{ env.CURRENT_DATE }}
-          PULL_REQUEST: "${{ vars.commit_url }}/${{ needs.release-please.outputs['libs/core--sha'] }}"
-          VERSION: ${{ needs.release-please.outputs['libs/core--tag_name'] }}
-          NOTES: ${{ needs.release-please.outputs['libs/core--notes'] }}
+          PULL_REQUEST: "${{ vars.commit_url }}/${{ steps.manifest-release.outputs['libs/core--sha'] }}"
+          VERSION: ${{ steps.manifest-release.outputs['libs/core--tag_name'] }}
+          NOTES: ${{ steps.manifest-release.outputs['libs/core--notes'] }}
         with:
           channel-id: 'julian-workflow-test'
           payload-file-path: "./.github/workflows/slack-release-info-payload.json"
