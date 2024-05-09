@@ -78,15 +78,26 @@ jobs:
         run: |
           echo "CURRENT_DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
+      - name: Release Please outputs
+        run: |
+          echo "release_created: ${{ needs.release-please.outputs['libs/core--release_created'] }}"
+          echo "upload_url: ${{ needs.release-please.outputs['libs/core--upload-url'] }}"
+          echo "html_url: ${{ needs.release-please.outputs['libs/core--html_url'] }}"
+          echo "tag_name: ${{ needs.release-please.outputs['libs/core--tag_name'] }}"
+          echo "major: ${{ needs.release-please.outputs['libs/core--major'] }}"
+          echo "minor: ${{ needs.release-please.outputs['libs/core--minor'] }}"
+          echo "patch: ${{ needs.release-please.outputs['libs/core--patch'] }}"
+          echo "sha: ${{ needs.release-please.outputs['libs/core--sha'] }}"
+
       - name: Core Slack Notification
         if: matrix.path == 'libs/core'
         uses: slackapi/slack-github-action@v1.26.0
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
           DATE: ${{ env.CURRENT_DATE }}
-          PULL_REQUEST: "${{ vars.commit_url }}/${{ needs.release-please.outputs['libs-core--sha'] }}"
-          VERSION: ${{ needs.release-please.outputs['libs-core--tag_name'] }}
-          NOTES: ${{ needs.release-please.outputs['libs-core--notes'] }}
+          PULL_REQUEST: "${{ vars.commit_url }}/${{ needs.release-please.outputs['libs/core--sha'] }}"
+          VERSION: ${{ needs.release-please.outputs['libs/core--tag_name'] }}
+          NOTES: ${{ needs.release-please.outputs['libs/core--notes'] }}
         with:
           channel-id: 'julian-workflow-test'
           payload-file-path: "./.github/workflows/slack-release-info-payload.json"
