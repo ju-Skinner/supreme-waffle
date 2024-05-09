@@ -22,6 +22,30 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
+## [0.8.0](https://github.com/ju-Skinner/supreme-waffle/compare/sw-core-v0.7.0...sw-core-v0.8.0) (2024-05-09)
+
+
+### Features 🚀
+
+* **avatar:** Add new size ([42c3660](https://github.com/ju-Skinner/supreme-waffle/commit/42c3660347df4b5e69e3ef2b67bffb5fce74bf8c))
+* **react:** Add PdsIcon helper ([615940f](https://github.com/ju-Skinner/supreme-waffle/commit/615940f1817d7aa68e6124eae076958c22fe90aa))
+
+
+### Bug Fixes 🐛
+
+* **avatar:** Remove xxs size ([#92](https://github.com/ju-Skinner/supreme-waffle/issues/92)) ([302df78](https://github.com/ju-Skinner/supreme-waffle/commit/302df786686618238ee6faa47ca72b710e53a361))
+* **avatar:** Sizing issue ([#91](https://github.com/ju-Skinner/supreme-waffle/issues/91)) ([9cbba26](https://github.com/ju-Skinner/supreme-waffle/commit/9cbba26b22f0024b5357c954160584941ab4d11a))
+* Change icon dependency to * to get latest upon update ([1ab2931](https://github.com/ju-Skinner/supreme-waffle/commit/1ab2931e09c3cafb4168c2d2cf34b7cfe3a645fc))
+* **core:** Out of sync package version ([3cafb50](https://github.com/ju-Skinner/supreme-waffle/commit/3cafb503caeae5bcf9176300af053c8da6070299))
+* **pds-link:** Icons should be imported and set via icon property ([8650929](https://github.com/ju-Skinner/supreme-waffle/commit/8650929ecf6561df0b182d451d066f7b126be9a1))
+* Versions ([6307167](https://github.com/ju-Skinner/supreme-waffle/commit/630716711abf92fcd82bedf94445742512799f57))
+
+
+### Documentation 📄
+
+* Add documentation regarding assets for icons ([638b5a7](https://github.com/ju-Skinner/supreme-waffle/commit/638b5a7687aecef8d5ab6843fe243685bf97b446))
+* Documentation updates ([aad73f7](https://github.com/ju-Skinner/supreme-waffle/commit/aad73f78461104b2e06cf3fb452fb8baf6c79852))
+
 ## [0.7.0](https://github.com/ju-Skinner/supreme-waffle/compare/sw-core-v0.6.1...sw-core-v0.7.0) (2024-05-08)
 
 

@@ -1,6 +1,6 @@
 {
-  "libs/core": "0.7.0",
-  "libs/react": "0.7.0",
-  "libs/doc-components": "0.7.0",
+  "libs/core": "0.8.0",
+  "libs/react": "0.8.0",
+  "libs/doc-components": "0.8.0",
   ".": "0.0.0"
 }
