@@ -22,6 +22,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
+## [0.9.0](https://github.com/ju-Skinner/supreme-waffle/compare/sw-core-v0.8.0...sw-core-v0.9.0) (2024-05-09)
+
+
+### Features 🚀
+
+* **avatar:** Remove xxl size ([3f0db95](https://github.com/ju-Skinner/supreme-waffle/commit/3f0db95f7f1accf4ebf7f39ea2e0907792e1fe81))
+
 ## [0.8.0](https://github.com/ju-Skinner/supreme-waffle/compare/sw-core-v0.7.0...sw-core-v0.8.0) (2024-05-09)
 
 
