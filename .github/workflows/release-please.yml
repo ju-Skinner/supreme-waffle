@@ -39,6 +39,21 @@ jobs:
           echo "RELEASES_created: ${{ steps.manifest-release.outputs.releases_created }}"
           echo "paths_released: ${{ steps.manifest-release.outputs.paths_released }}"
 
+      - name: Set Core outputs
+        if: contains(fromJSON(steps.manifest-release.outputs.paths_released), 'libs/core')
+        run: |
+          core.setOutput('libs/core--tag_name', steps.manifest-release.outputs['libs/core--tag_name'])
+          core.setOutput('libs/core--sha', steps.manifest-release.outputs['libs/core--sha'])
+          core.setOutput('libs/core--notes', steps.manifest-release.outputs['libs/core--notes'])
+
+      # - name: Set React outputs
+      #   if: contains(fromJSON(steps.manifest-release.outputs.paths_released), 'libs/react')
+      #   run:
+
+      # - name: Set React outputs
+      #   if: contains(fromJSON(steps.manifest-release.outputs.paths_released), 'libs/doc-components')
+      #   run:
+
   release-packages:
     runs-on: ubuntu-latest
     needs: release-please
@@ -64,15 +79,15 @@ jobs:
           value: ${{ matrix.path}}
           index_of_str: "libs/"
 
-      - name: Build Packages
-        run: npm install --legacy-peer-deps
+      # - name: Build Packages
+      #   run: npm install --legacy-peer-deps
 
-      - uses: ./.github/workflows/actions/publish-npm
-        with:
-          tag: 'latest'
-          token: ${{ secrets.NPM_TOKEN }}
-          working-directory: ${{ matrix.path }}
-          project: "sw-${{ steps.project-name.outputs.substring }}"
+      # - uses: ./.github/workflows/actions/publish-npm
+      #   with:
+      #     tag: 'latest'
+      #     token: ${{ secrets.NPM_TOKEN }}
+      #     working-directory: ${{ matrix.path }}
+      #     project: "sw-${{ steps.project-name.outputs.substring }}"
 
       - name: Current Date
         run: |
@@ -80,14 +95,14 @@ jobs:
 
       - name: Release Please outputs
         run: |
-          echo "release_created: ${{ needs.release-please.outputs['libs/core--release_created'] }}"
-          echo "upload_url: ${{ needs.release-please.outputs['libs/core--upload-url'] }}"
-          echo "html_url: ${{ needs.release-please.outputs['libs/core--html_url'] }}"
-          echo "tag_name: ${{ needs.release-please.outputs['libs/core--tag_name'] }}"
-          echo "major: ${{ needs.release-please.outputs['libs/core--major'] }}"
-          echo "minor: ${{ needs.release-please.outputs['libs/core--minor'] }}"
-          echo "patch: ${{ needs.release-please.outputs['libs/core--patch'] }}"
-          echo "sha: ${{ needs.release-please.outputs['libs/core--sha'] }}"
+          echo "release_created: ${{ needs.release-please.release_outputs['libs/core--release_created'] }}"
+          echo "upload_url: ${{ needs.release-please.release_outputs['libs/core--upload-url'] }}"
+          echo "html_url: ${{ needs.release-please.release_outputs['libs/core--html_url'] }}"
+          echo "tag_name: ${{ needs.release-please.release_outputs['libs/core--tag_name'] }}"
+          echo "major: ${{ needs.release-please.release_outputs['libs/core--major'] }}"
+          echo "minor: ${{ needs.release-please.release_outputs['libs/core--minor'] }}"
+          echo "patch: ${{ needs.release-please.release_outputs['libs/core--patch'] }}"
+          echo "sha: ${{ needs.release-please.release_outputs['libs/core--sha'] }}"
 
       - name: Core Slack Notification
         if: matrix.path == 'libs/core'
