@@ -56,6 +56,7 @@ export class PdsAvatar {
 
   private avatarSize() {
     const sizes: { [key: string]: any } = {
+      xxs: '16px',
       xs: '24px',
       sm: '32px',
       md: '40px',
