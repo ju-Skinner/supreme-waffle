@@ -47,10 +47,25 @@ jobs:
           fetch-depth: 0
           ref: ''
 
-      - uses: google-github-actions/release-please-action@v4
+      - uses: googleapis/release-please-action@v4
         id: manifest-release
         with:
           manifest-file: .release-please-manifest.json
+
+      - name: Update package-lock
+        run: |
+          rm package-lock.json
+          npm install --legacy-peer-deps
+
+          if git diff --exit-code --name-only package-lock.json; then
+            echo "No Changes"
+          else
+            git config user.name "Automation Bot"
+            git config user.email "ju.skinner@gmail.com"
+            git add package-lock.json
+            git commit -m "chore: update package-lock.json"
+            git push
+          fi
 
       - name: Show output from Release-Please
         run: |
