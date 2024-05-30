@@ -1,10 +1,10 @@
 {
-  "blocks": [
+	"blocks": [
 		{
 			"type": "header",
 			"text": {
 				"type": "plain_text",
-				"text": ":pine:  Pine Release v${{ env.VERSION }} :pine:"
+				"text": ":pine:  Pine Icon Release v${{ env.VERSION }} :pine:"
 			}
 		},
 		{
@@ -30,7 +30,14 @@
 			"type": "section",
 			"text": {
 				"type": "mrkdwn",
-				"text": "The details for version *${{ env.VERSION }}* can be found at the link provided below. \n\n ${{ env.RELEASE_URL }}"
+				"text": "The details for version *${{ env.VERSION }}* can be found at the link provided below."
+			}
+		},
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "*Commit Message*: ${{ env.COMMIT_MESSAGE }}\n\n *Release*: ${{ env.RELEASE_URL }}\n\n *Changelog*: ${{ env.CHANGELOG_URL }}"
 			}
 		}
 	]
