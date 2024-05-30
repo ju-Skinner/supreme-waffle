@@ -32,4 +32,4 @@ jobs:
           VERSION: ${{ inputs.version }}
         with:
           channel-id: ${{ inputs.channel }}
-          payload-file-path: "./.github/workflows/slack-release-info-payload.json"
+          payload-file-path: "./.github/workflows/slack_payloads/release-info.json"
