@@ -7,10 +7,7 @@
     "declaration": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
-    "lib": [
-      "dom",
-      "es2017"
-    ],
+    "lib": ["dom", "es2017"],
     "module": "es2015",
     "moduleResolution": "node",
     "noImplicitAny": true,
@@ -22,16 +19,10 @@
     "strict": true,
     "strictPropertyInitialization": false,
     "paths": {
-      "@ju-skinner/sw-core": [
-        "./libs/core"
-      ],
-      "@ju-skinner/sw-react": [
-        "./libs/react"
-      ],
-      "@ju-skinner/sw-doc-components": [
-        "./libs/doc-components"
-      ]
+      "@ju-skinner/sw-core": ["./libs/core"],
+      "@ju-skinner/sw-doc-components": ["./libs/doc-components"],
+      "@ju-skinner/sw-react": ["./libs/react"]
     },
-    "target": "es2017",
+    "target": "es2017"
   }
 }
